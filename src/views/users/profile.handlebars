@@ -1,0 +1,66 @@
+                
+
+                         {{!-- {{#if isMyPosts}}
+                        <h2>Welcome to Your Profile Page</h2>
+                        {{else}}
+                        <h2>Welcome to {{postUser.username}}'s Profile Page</h2>
+                        {{/if}} --}}
+                        
+                        {{!-- <h3><img src="/upload/logo/{{postUser._id}}/{{postUser.logo}}" style="display:inlne-block;width:2em;height:2em;"></h3> --}}
+                        
+{{#extend "css"}}
+    <style>  
+        .leftBlock p, .leftBlock p>span{
+            font-size: 0.7rem;
+            
+        }
+        .leftBlock p>span{
+            color: grey;
+            display:inline-block;
+            width:50px;
+        }
+    </style>
+{{/extend}}
+
+{{> general/header}}
+<div class="contentBlock">
+        <div class="ui column grid" style="margin-top: 0.5rem;">
+                
+                <div class="twelve wide computer sixteen wide mobile column stackable leftBlock"> 
+                    <h2 style="margin-bottom:4rem; text-align:center;font-size:2rem;">{{postUser.username}}'s Page</h2>
+
+                    <h3 style="font-size:1rem;margin-bottom:2rem;">个人信息</h3>
+
+                    <p> <span>Hash ID: </span> {{ postUser._id }}</p>  
+                    <div class="ui divider"></div>
+                    <p> <span>用户名: </span> {{ postUser.username }}</p> 
+                    <div class="ui divider"></div>
+                    <p> <span>邮箱: </span> {{ postUser.email }}</p> 
+                    <div class="ui divider"></div>
+
+                    <p>注册时间</p>
+                    <div class="ui divider"></div>
+                    <p>{{ postUser.created_at }}</p>
+                    <br>
+
+                    <p> {{postUser.username}}'s Posts</p> 
+                    {{> post/postsLoop}}
+                </div>
+    
+                {{!-- <div class="four wide computer sixteen wide mobile column stackable rightBlock">
+                    {{> general/rightBlock}}
+                </div> --}}
+        </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+         
+                    

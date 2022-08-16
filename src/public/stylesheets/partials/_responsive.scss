@@ -1,0 +1,66 @@
+// @media only screen and (min-width: 992px){
+//     .ui.column.grid>[class*="four wide computer"].column, .ui.grid>.column.row>[class*="four wide computer"].column, .ui.grid>.row>[class*="four wide computer"].column, .ui.grid>[class*="four wide computer"].column {
+//         width: 30%!important; 
+//     }
+// }
+
+
+@media screen and (min-width: 768px){
+
+    // .leftBlock{
+    //   // margin-right:2rem; 
+           
+    // }
+    // .btcPrice{
+    //     display: inline!important;
+    // }
+    // .rightBlock{
+    //     margin-top:0;
+    // }
+
+
+    // .cryptoCurrencyDetail, .airdropList{
+
+    // }
+  
+        
+}
+
+@media screen and (max-width: 768px){
+    .home .menuBar a{
+         padding-top:0.5rem;
+         padding-bottom:0.5rem;
+     }
+
+     .cryptoCurrencyDetail,.airdropDetail,.airdropList{
+
+        .projectTabs{
+            .ui.secondary.menu .item{
+                font-size: 1rem;
+                padding-left:2px;
+                padding-right:2px;
+            }
+            .ui.tab.segment{
+                padding-left: 15px;
+                padding-right: 15px;
+            }
+        }
+    }
+
+ } 
+
+
+@media screen and (max-width: 480px){
+  .secondHeader{
+      span.secondaryBrandName{
+          font-size: 2.5rem;
+
+      }
+  }
+        
+}
+
+
+
+
+//    

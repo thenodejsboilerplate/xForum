@@ -1,0 +1,99 @@
+<!--if the single page has the single css file,then use the folling-->
+{{#extend "css"}}
+<style>
+  .h1_section{
+    max-width: 100%;
+    max-height:50%
+    padding:0;
+    background-color: #00d1b2;
+  }
+  .h1_section p, .h1_section h1{
+    color: #ffff;
+  }
+  p{
+    margin-top: 0;
+    margin-bottom: 1rem;
+    line-height: 2;
+  }
+  section {
+    padding: 2rem 2rem;
+
+  }
+  
+  h1{
+    font-size: 41px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.15);
+    padding-bottom: 2rem;
+    text-align: center;
+
+  }
+  section p {
+    padding-top: 2rem;
+  }
+
+
+
+  h2{
+    font-weight: 800;
+    font-size: 2rem;
+    border: 0 none;
+    padding: 0;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    padding-bottom:2rem;
+    padding-top: 0;
+    text-align: center;
+  }
+  
+</style>
+{{/extend}}
+
+
+   {{> general/header}}
+
+    {{#if post}}
+          
+     <section class="h1_section ">
+            
+            <h1>{{post.title}}</h1>
+
+            <p>Brief introduction: This new guide will show you everything you need to know about mobile SEO.
+
+    First, I’ll show you why mobile optimization is more important than ever.
+
+    Then, I’ll help you get your website ready for Google’s mobile-first index.
+
+    Sound good? Let’s dive right in…</p>
+            <span style="display:inline-block; padding-top:0.5rem; color: rgb(130, 120, 120);font-size:0.7rem">
+                
+                    By <a href="/user/profile/{{post.user_id}}">{{ postUser.username }}</a> | Category: <a href="#">{{post.category}}</a>  | 
+                    Updated: {{ post.updated_at }} 
+                        {{#each post.tags}}
+                        |  <span style="display:inline-block;border:1px solid grey;">{{name}}</span>
+                        {{/each}} 
+                        {{!-- |
+                        {{post.pv}}'s reading         --}}
+            </span>
+     </section>
+
+
+     <section style="">
+        <h2>What Is Mobile SEO?</h2>
+        <p>{{ post.content }}</p>
+
+
+
+
+        <h2>What Is Mobile SEO?</h2>
+        <p>{{ post.content }}</p>
+
+     </section>
+
+
+
+
+
+    {{/if}}
+
+    {{!-- {{> post/comment }} --}}
+                                   
+

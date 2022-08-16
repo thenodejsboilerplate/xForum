@@ -1,0 +1,266 @@
+{{#extend "css"}}
+  <style>
+    .secondHeader{
+      display: none;
+    }
+    .dividing.header{
+      color: olive;
+      font-size:1rem;
+      margin:1.5rem 0;
+
+    }
+
+    .formWrapper{
+      padding:1rem 2rem;
+      
+    }
+    .breadcrumb .section, .breadcrumb i.divider{
+      font-size:0.7rem!important;
+    }
+  </style>
+
+ 
+{{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script> --}}
+
+{{/extend}}
+
+{{> general/header}}
+
+
+<div class="formWrapper contentBlock">
+                    
+  <div class="ui mini breadcrumb">
+    <a href="/" class="section">Home</a>
+    <i class="right chevron icon divider"></i>
+    <div class="active section">Airdrop 【空投提交】</div>
+  </div>
+
+  {{> general/message}}
+
+  <form class="ui form" method="POST" action="/airdrop/airdropNew">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    
+    <h4 class="ui dividing header">必填</h4>
+
+    <div class="field">
+      <label>Name</label>
+      <input type="text" name="projectName" placeholder="BTC (比特币)">
+    </div>
+    <div class="field">
+      <label>Symbol</label>
+      <input type="text" name="symbol" placeholder="BTC">
+    </div>
+
+    {{!-- <div class="field">
+      <label>分类</label>
+      <select multiple class="ui dropdown" name="category">
+          <option value="" selected>选择分类</option>
+          {{#if categories}}
+              {{#each categories}}
+                  <option value="{{this.key}}">{{this.value}}</option>
+              {{/each}}
+          {{/if}}
+        </select>
+    </div>   --}}
+    <div class="field">
+      <label> Concept（概念） </label>
+      <textarea name="brief" placeholder="比特币是一种P2P形式的数字货币..."></textarea>
+    </div>
+    <div class="field">
+      <label>Detail(项目详情)</label>
+      <textarea name="detail" id="detail" placeholder=""></textarea>
+    </div>  
+
+    <div class="field">
+      <label>空投要求</label>
+      <textarea name="airdropRequirement"  placeholder="In order to get the ico, 1, ...2,..."></textarea>
+    </div> 
+
+    <div class="field">
+      <label>Airdropping Website (空投地址)</label>
+      <input type="text" name="airdroppingAddress" placeholder="Airdropping Address here">
+    </div> 
+
+    <div class="field">
+        <div class="fields">
+            <div class="eight wide field">
+            <label>Airdrop Opening Date</label>
+            <div class="sixteen fields">
+
+                <div class="field">
+                <input type="text" name="airdropDay[]" maxlength="4" placeholder="Day">
+                </div>
+
+                <div class="field">
+                <select class="ui fluid search dropdown" name="airdropMonth[]">
+                    <option value="">Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                </div>
+                <div class="field">
+                <input type="text" name="airdropYear[]" maxlength="4" placeholder="Year">
+                </div>
+            </div>
+            </div>
+
+            <div class="eight wide field">
+            <label>Airdrop Closing Date</label>
+            <div class="sixteen fields">
+
+
+                <div class="field">
+                <input type="text" name="airdropDay[]" maxlength="4" placeholder="Day">
+                </div>
+
+
+                <div class="field">
+                <select class="ui fluid search dropdown" name="airdropMonth[]">
+                    <option value="">Month</option>
+                    <option value="1">January</option>
+                    <option value="2">February</option>
+                    <option value="3">March</option>
+                    <option value="4">April</option>
+                    <option value="5">May</option>
+                    <option value="6">June</option>
+                    <option value="7">July</option>
+                    <option value="8">August</option>
+                    <option value="9">September</option>
+                    <option value="10">October</option>
+                    <option value="11">November</option>
+                    <option value="12">December</option>
+                </select>
+                </div>
+                <div class="field">
+                <input type="text" name="airdropYear[]" maxlength="4" placeholder="Year">
+                </div>
+            </div>
+            </div>
+
+
+        </div>
+    </div> 
+
+
+
+
+
+    <h4 class="ui dividing header">选填</h4>
+    <div class="field">
+      <label>白皮书英文版</label>
+      <input type="text" name="whitePaperAddress" placeholder="www.bitcoin.org/whitepaper.pdf">
+    </div>  
+    <div class="field">
+      <label>白皮书中文版</label>
+      <input type="text" name="whitePaperAddress_cn" placeholder="www.bitcoin.org/whitepaper_cn.pdf">
+    </div>
+    
+
+    <div class="field">
+      <label>供应总量</label>
+      <input type="text" name="totalSupply" placeholder="2100万">
+    </div> 
+
+    <div class="field">
+      <label>通胀情况</label>
+      <input type="text" name="inflation" placeholder="总数不变，不实行通胀">
+    </div> 
+
+
+    <div class="field">
+      <label>官网</label>
+      <input type="text" name="website" placeholder="www.bitcoin.org">
+    </div> 
+
+
+
+
+
+
+    <h4 class="ui dividing header">社交（选填）</h4>
+    <div class="field">
+      <label>Twitter</label>
+      <input type="text" name="twitter">
+    </div> 
+
+
+    <div class="field">
+      <label>Facebook</label>
+      <input type="text" name="facebook">
+    </div> 
+
+    <div class="field">
+      <label>Github</label>
+      <input type="text" name="github">
+    </div> 
+
+
+    <div class="field">
+      <label>Linkedin</label>
+      <input type="text" name="linkedin">
+    </div> 
+
+    <div class="field">
+      <label>Telegram</label>
+      <input type="text" name="telegram">
+    </div> 
+
+
+
+    <br>
+
+    <input class="ui submit fluid button" type="submit" value="提交审核">
+
+  </form>
+</div>
+
+
+
+{{#extend "js"}}
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/latest/css/font-awesome.min.css">
+  {{!-- <link rel="stylesheet" href="/simplemde/dist/simplemde.min.css">
+  <script src="/simplemde/dist/simplemde.min.js"></script> --}}
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script>
+
+<script>
+  var simplemde = new SimpleMDE({ 
+  spellChecker: false,
+	autofocus: true,
+	autosave: {
+		enabled: true,
+		uniqueId: "detail",
+		delay: 1000,
+	},
+  autoDownloadFontAwesome: false,
+	element: document.getElementById("detail"),
+//	forceSync: true,
+	hideIcons: ["guide"],
+	placeholder: "项目详细介绍..."
+  
+});
+</script>
+
+
+<script src="http://apps.bdimg.com/libs/jquery/2.1.4/jquery.min.js"></script>
+<script src="/semantic/dist/semantic.min.js"></script>
+<script src="/semantic/dist/components/dropdown.min.js"></script>
+
+<script>
+$('.ui.dropdown')
+  .dropdown()
+;
+</script>
+
+{{/extend}}

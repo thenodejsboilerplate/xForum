@@ -1,0 +1,187 @@
+{{> general/header}}
+{{#extend "css"}}
+  <style>
+
+    .leftMenu{
+        border:1px dashed #e3e3e3!important;
+
+    }
+    .twelve p{
+        line-height:1.2rem;
+
+    }
+    .twelve p, p>a, ul li,ol li{
+        font-size:0.85rem;
+    }
+    ul li,ol li{
+        padding-bottom: 0.8rem;
+        line-height:1.2rem;
+    }
+
+
+    .detailList p>span{
+        display: inline-block;
+        padding-left:1rem;
+        
+    
+    }
+
+    .detailList p>span>a{
+        color:grey;
+        border-bottom:1px solid grey;
+    
+    }
+
+    .detailList .project_detail, .detailList p{
+        padding-left: 0;
+        margin: 0.5rem 0;
+    }
+
+
+    .basicInfo h3{
+        margin-top: 2rem;
+        border-left:0.5rem solid #e3e3e3;
+        padding-left:1rem;
+    }
+    .basicInfo>p{
+        margin-top: 1rem;
+        margin-bottom:1rem;
+    }
+    /**
+    @media screen and (min-width: 768px){
+        .leftMenu{
+            position: fixed;
+
+        }
+    }    
+    **/
+    @media screen and (min-width: 768px){
+    .leftMenu{
+        border:0!important;
+    }
+
+    }
+    @media screen and (max-width: 768px){
+        .coloredBlock{
+            padding: 20px 0;
+        }
+    }
+  </style>
+{{/extend}}
+
+   {{#if project}}
+   <div class="detail">
+    <div class="coloredBlock">
+        <div class="itemContent">
+            <h2>{{project.projectName}}</h2>
+            {{!-- <div style="text-align: left;">{{{project.detail}}}</div> --}}
+            <p>{{project.brief}}</p>
+        </div>
+    </div>
+     
+    <div class="ui column grid contentBlock detailContainer" style="margin-top: 0.5rem;">
+            <div class="four wide computer sixteen wide mobile column stackable" >
+                <div class="ui secondary vertical menu leftMenu">
+                    {{!-- <a href="" class="active item">
+                    Menu
+                    </a> --}}
+
+                    <a href="#introduction" class="active item">
+                       项目介绍
+                    </a>
+                    
+                    <a href="#basicInfo" class="item">
+                       综合参数
+                    </a>
+                    
+                    <a href="#reputation" class="item">
+                       声誉记录 && 曝光
+                    </a>
+{{!-- 
+                    {{#if project.inflation}}
+                    <a href="#inflation" class="item">
+                    通胀情况
+                    </a>
+                    {{/if}}
+
+                    {{#if project.downloadingAddress}}
+                    <a href="#downloadingAddress" class="item">
+                    官网
+                    </a>
+                    {{/if}}
+
+                    {{#if project.whitePaperAddress}}
+                    <a href="#whitePaperAddress" class="item">
+                    白皮书
+                    </a>
+                    {{/if}} --}}
+
+
+                    {{#if project.reviews}}
+                    <a href="#reviews" class="item">
+                    客户评价
+                    </a>
+                    {{/if}}
+
+                </div>
+
+            </div>
+
+            <div class="twelve wide computer sixteen wide mobile column stackable detailList" style="padding-top: 0;">  
+               
+                {{!-- <h3 id="introduction" class="h3s">项目介绍</h3> --}}
+                <div class="project_detail">{{{project.detail}}} </div>
+                <div class="ui divider"></div>
+
+                <div class="basicInfo" id="basicInfo">
+                    <h3>综合参数</h3>
+                    {{#if project.totalSupply}}
+                    {{!-- <div class="ui divider"></div> --}}
+                    <p>发行总量: <span>{{project.totalSupply}}</span> </p> 
+                    {{!-- <p></p> --}}
+                    {{/if}}
+
+                    {{#if project.inflation}}
+                    {{!-- <div class="ui divider"></div> --}}
+                    <p>通胀情况: <span>{{project.inflation}}</span></p>
+                    {{!-- <p> </p> --}}
+                    {{/if}}
+
+                    {{#if project.downloadingAddress}}
+                    {{!-- <div class="ui divider"></div> --}}
+                    <p>官网:<span>
+                        <a href="{{project.downloadingAddress}}" target="_blank">{{project.downloadingAddress}}</a>
+                    </span></p>
+                    {{!-- <p> </p> --}}
+                    {{/if}}
+                    
+                    {{#if project.whitePaperAddress}}
+                    {{!-- <div class="ui divider"></div> --}}
+                    {{!-- <h3 id="github">Github (源代码)</h3>
+                    <p> {{project.github}}</p> --}}
+                    <p>白皮书（English） <span><a href="{{project.whitePaperAddress}}" target="_blank">查阅</a></span> </p>
+                    {{!-- <p>  </p> --}}
+                    {{/if}}
+
+                    {{#if project.whitePaperAddress_cn}}
+                    <p>白皮书（中文） <span><a href="{{project.whitePaperAddress_cn}}" target="_blank">查阅</a></span> </p>
+                    {{/if}}
+
+                    <h3 id="reputation">声誉记录 && 平台曝光</h3>
+                    {{!-- <span style="font-size:0.5rem;display:block;">数据来自互联网, 如有不实，请联系管理员删除</span> --}}
+                    {{#if project.reputation}}
+                      {{project.reputation}}
+                    {{else}}
+                      <p>暂无记录</p> 
+                    {{/if}}
+                </div>
+
+
+
+
+
+            </div>
+
+    </div>
+   </div>
+{{/if}}

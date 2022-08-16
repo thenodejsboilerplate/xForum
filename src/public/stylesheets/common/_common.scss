@@ -1,0 +1,12 @@
+@import "./general/_variables";
+
+@import "./general/_mixin";
+@import "./general/_functions";
+   //self-coded popular mixin 
+@import "./general/_general";
+   //general css class
+//@import "./_currencies";
+
+// .ui.divider:not(.vertical):not(.horizontal){
+//     border-top: 1px solid lighten(#e3e3e3, 6%);
+// }

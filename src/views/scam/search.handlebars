@@ -1,0 +1,54 @@
+{{#extend "css"}}
+<style>
+    .searchContainer{
+        margin-top: 6rem!important;
+    }
+    .searchContainer h1{
+        font-size: 2rem;
+        text-align: center;
+        margin-bottom: 2rem;
+    }
+    .field.has-addons{
+
+    }
+    p.control.inputP{
+        width: 38%!important;
+    }
+</style>
+{{/extend}}
+
+{{> general/header}}
+
+
+
+<div class="searchContainer">
+    <h1>Check Your Smart Contract/Token Address</h1>
+    <section class="search">
+       <form action="/scam/searchPost" method="post" >
+            <div class="field has-addons has-addons-centered">
+            <p class="control">
+                <span class="select">
+                <select name="chain">
+                    <option value="eth">Ethereum</option>
+                    <option value="bnb">Binance</option>
+                    <option value="matic">Polygon</option>
+                </select>
+                </span>
+            </p>
+            <p class="control inputP">
+                <input class="input" name="address" type="text" placeholder="Smart Contract Address">
+            </p>
+            <p class="control">
+                <input type="submit" class="button is-primary" placeholder="CHECK">
+                {{!-- <a class="button is-primary">
+                Check
+                </a> --}}
+            </p>
+            </div>
+       </form>
+
+    </section>
+
+</div>
+
+

@@ -1,0 +1,235 @@
+{{#extend "css"}}
+  <style>
+    .main{
+        margin:2rem 2rem;
+    }
+    .icon-text{
+        margin-bottom: 1rem;
+    }
+    a.messageA{
+       display: inline-block;
+       padding-right:2rem;
+       padding-top: 2rem;
+       color: rgb(12, 11, 11)!important;
+       font-weight: bold;
+    }
+    .detail{
+        border:1px solid rgb(177, 175, 175)
+        margin-top:2rem;
+    }
+    .detail .content{
+        margin-top:2rem;
+
+    }
+
+    .detail .content h2{
+        font-size: 1.5rem;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        margin-top:1rem;
+    }
+    .detail .content p{
+        padding:1rem;
+        padding-left:2rem;
+        border: 1px solid #e4e4e4;
+        border-radius: 12px;
+        overflow: hidden;
+                
+        
+    }
+
+
+
+    section.review{
+        margin-top:5rem;
+    }
+    .review h2{
+        font-size: 3rem;
+        margin-bottom: 2rem;
+        color: grey;
+
+    }
+
+  </style>
+{{/extend}}
+
+
+{{> general/header}}
+
+
+
+
+<div class="main">
+       {{#if project}}
+    <section class="block">
+        <article class="message is-{{project.scamLevel}}">
+
+            <div class="message-body">
+                <div class="icon-text">
+                    <span class="icon has-text-{{project.scamLevel}}">
+                        {{#if project.isPrimary}}
+                                <i class="fas fa-check-square" ></i>
+                            {{else project.isDanger}}
+                                <i class="fas fa-ban" ></i>
+                            {{else project.isWarning}}
+                                <i class="fas fa-exclamation-triangle"></i>
+
+                        {{/if}}
+                    </span>
+                    <span>
+                        {{#if project.isPrimary}}
+                          Status:    Safe
+                        {{else project.isDanger}}
+                          Status:    Danger
+                        {{else project.isWarning}}
+                          Status:    Warning
+                        {{/if}}
+
+                    </span>
+                </div>
+
+
+             <p>Message:   {{project.detail}}</p> 
+             
+                {{#if like}}
+                <a href="#" class="messageA"><span class="like">已关注 {{project.likeProject}}</span></a>       
+                {{else}}
+                <a href="/dir/like?id={{project._id}}" class="messageA"><span class="like">+ 关注 {{project.likeProject}}</span></a>
+                {{/if}}
+
+                <a href="{{project.url}}" class="messageA">View</a>
+                <a href="/project/update?id={{project._id}}" class="messageA">Update Data</a>
+
+
+            </div>
+        </article>
+    </section>
+
+
+    <section class="detail">
+      <div class="content">
+        <h2>Description</h2>
+        <p>Lorem ipsum leo risus, porta ac consectetur ac, vestibulum at eros. Donec id elit non mi porta gravida at eget metus. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Cras mattis consectetur purus sit amet fermentum.</p>
+
+
+        <h2>Founder</h2>
+        <p>0x4a8c9d751eeabc5521a68fb080dd7e72e46462af</p>
+
+
+        <h2>URL of the Dapp</h2>
+        <p>{{project.url}}</p>
+
+
+        <h2>Contract Address</h2>
+        <p>0x4a8c9d751eeabc5521a68fb080dd7e72e46433ade</p>
+
+
+
+      </div>
+
+    </section>
+
+
+
+    <section class="review"> 
+       <h2>Reviews</h2>
+        <article class="media">
+        <figure class="media-left">
+            <p class="image is-64x64">
+            <img src="https://bulma.io/images/placeholders/128x128.png">
+            </p>
+        </figure>
+        <div class="media-content">
+            <div class="content">
+            <p>
+                <strong>Barbara Middleton</strong>
+                <br>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis porta eros lacus, nec ultricies elit blandit non. Suspendisse pellentesque mauris sit amet dolor blandit rutrum. Nunc in tempus turpis.
+                <br>
+                <small><a>Like</a> · <a>Reply</a> · 3 hrs</small>
+            </p>
+            </div>
+
+            <article class="media">
+            <figure class="media-left">
+                <p class="image is-48x48">
+                <img src="https://bulma.io/images/placeholders/96x96.png">
+                </p>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                <p>
+                    <strong>Sean Brown</strong>
+                    <br>
+                    Donec sollicitudin urna eget eros malesuada sagittis. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Aliquam blandit nisl a nulla sagittis, a lobortis leo feugiat.
+                    <br>
+                    <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+                </p>
+                </div>
+
+                <article class="media">
+                Vivamus quis semper metus, non tincidunt dolor. Vivamus in mi eu lorem cursus ullamcorper sit amet nec massa.
+                </article>
+
+                <article class="media">
+                Morbi vitae diam et purus tincidunt porttitor vel vitae augue. Praesent malesuada metus sed pharetra euismod. Cras tellus odio, tincidunt iaculis diam non, porta aliquet tortor.
+                </article>
+            </div>
+            </article>
+
+            <article class="media">
+            <figure class="media-left">
+                <p class="image is-48x48">
+                <img src="https://bulma.io/images/placeholders/96x96.png">
+                </p>
+            </figure>
+            <div class="media-content">
+                <div class="content">
+                <p>
+                    <strong>Kayli Eunice </strong>
+                    <br>
+                    Sed convallis scelerisque mauris, non pulvinar nunc mattis vel. Maecenas varius felis sit amet magna vestibulum euismod malesuada cursus libero. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Phasellus lacinia non nisl id feugiat.
+                    <br>
+                    <small><a>Like</a> · <a>Reply</a> · 2 hrs</small>
+                </p>
+                </div>
+            </div>
+            </article>
+        </div>
+        </article>
+
+        <article class="media">
+        <figure class="media-left">
+            <p class="image is-64x64">
+            <img src="https://bulma.io/images/placeholders/128x128.png">
+            </p>
+        </figure>
+        <div class="media-content">
+            <div class="field">
+            <p class="control">
+                <textarea class="textarea" placeholder="Add a comment..."></textarea>
+            </p>
+            </div>
+            <div class="field">
+            <p class="control">
+                <button class="button">Post comment</button>
+            </p>
+            </div>
+        </div>
+        </article>
+
+
+
+
+
+
+    </section>
+
+   {{/if}}
+</div>
+
+
+
+{{#extend "js"}}
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+{{/extend}}

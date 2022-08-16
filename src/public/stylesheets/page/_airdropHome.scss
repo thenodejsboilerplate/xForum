@@ -1,0 +1,90 @@
+.airdropList{
+      
+    @import '../partials/_topBlockHeader';
+    @import '../partials/projectTabs';
+
+    //general
+    .airdropTag{
+        display: inline-block;
+        border: 1px solid transparent;
+        padding: 0.2rem;
+        color: #fff;
+        border-radius: 5%;
+    }
+
+    .airdropArray{
+        //detail
+        
+        .airdropListLeftImage,.airdropListRightText{
+            display: inline-block;
+            
+        }
+        .airdropListLeftImage{
+            display: inline-block;
+            width: 22%;
+            
+           
+            img{
+                display: inline-block;
+                width:50px;
+                height:50px;
+
+                margin-bottom:50%;
+
+            }
+        }
+        .airdropListRightText{
+            width:78%;
+            p .goToAirdrop{
+                display: inline-block;
+            }
+            .airdropListTag{
+
+                .review, .likeIt, .goToAirdrop{
+                    margin-left:0.2rem;
+                }
+                .review{
+                    background-color: grey;
+                }
+                .likeIt{
+                    background-color: rgba(212, 137, 0, 0.7);
+                }
+
+            }
+            .airdropListName{
+                margin-top:0.5rem;
+                margin-bottom:0.5rem;
+
+                .projectSimpleName{
+                    font-size: 0.5rem;
+                    
+                    background-color: olive; 
+                }
+
+            }
+            .airdropListDate{
+                p, p span{
+                    font-size: 0.6rem;
+                    color:grey;
+                }
+                p{
+                    margin-bottom:0;
+                }
+
+            }
+
+            a.goToAirdrop{
+                display: block;
+                text-align: center;
+                background-color: rgba(22, 197, 149, 0.66);//#e3e3e3;
+                color: #fff;
+                margin-top:1rem;
+            } 
+
+
+
+
+
+        }    
+    }
+}

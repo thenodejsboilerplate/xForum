@@ -1,0 +1,66 @@
+.projectTabs{
+       .ui.tab.segment{
+           p>span>a{
+               color: grey;
+           }
+            a.fileFolder:hover{
+                border: 1px dashed lighten($mainColor,20%);
+            }
+            h2{
+                font-size:1.8rem;
+                margin-bottom: 3rem;
+            }
+        
+            a.fileFolder{
+                display: block;
+                width:100%; 
+                margin:1rem;
+                margin-left:0;
+                padding:1rem;
+                padding-top:0;
+                padding-bottom:0;  
+                border: 1px solid #eeeeee;
+                background-color: white; 
+                width:100%;
+            }
+
+        
+            p.h2Tip{
+                margin-bottom:1.5rem;
+                padding:0;
+                border:0;
+                background-color: transparent; 
+                color: grey;
+            }
+        
+            .fileimg{
+                display: inline-block; 
+                height:100%;
+                margin-top: 0.6rem;
+            }
+       }
+
+
+
+    }
+
+    .coinElements{
+        h3{
+            border-left:0.39rem solid #e3e3e3;
+            padding-left:0.6rem;
+        }
+
+        p, .airdropRequirement{
+            margin-bottom: 0.6rem;
+            padding:1rem;
+            width:100%;
+            border:1px solid #eee;
+            background-color: white;
+            font-size:1rem
+        }
+
+        p>span{
+            font-size:1rem
+        }
+
+    }

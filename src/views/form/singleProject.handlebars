@@ -1,0 +1,140 @@
+{{#extend "css"}}
+  <style>
+   form{
+    margin:0 1rem 2rem 2rem;
+    border: 0.5px solid rgb(245, 240, 240);
+    padding:2rem;
+   }
+   h1{
+      font-size:2rem;
+      margin:2rem 0 2rem 2rem;
+   }
+  </style>
+
+ 
+{{!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.css">
+<script src="https://cdn.jsdelivr.net/simplemde/latest/simplemde.min.js"></script> --}}
+
+{{/extend}}
+
+{{> general/header}}
+
+
+<section>
+<h1>Submit the SCAM Dapp!</h1>
+
+  <form method="POST" action="/project/post">
+
+    {{> general/message}}
+
+  <input type="hidden" name="_csrf" value="{{csrfToken}}">
+
+  <div class="field">
+    {{!-- <label class="label">Name</label> --}}
+    <div class="control">
+      <input type="text" class="input" name="projectName" placeholder="Dapp Name">
+    </div>
+  </div>
+
+  <div class="field">
+    {{!-- <label class="label">Message</label> --}}
+    <div class="control">
+      <textarea  class="textarea" name="detail" placeholder="Description about the Dapp"></textarea>
+    </div>
+  </div>
+
+  <div class="field">
+    {{!-- <label class="label">Message</label> --}}
+    <div class="control">
+      <input type="text" class="input" name="address" placeholder="Address of the Contract/Token">
+    </div>
+  </div>
+
+
+  <div class="field">
+    {{!-- <label class="label">Message</label> --}}
+    <div class="control">
+      <input type="text" class="input" name="url" placeholder="url of the Dapp">
+    </div>
+  </div>
+
+
+  <div class="field">
+    {{!-- <label class="label">Subject</label> --}}
+    <div class="control">
+      <div class="select">
+        <select  class="select" name="category">
+            <option value="" selected>Category</option>
+            {{#if categories}}
+                {{#each categories}}
+                    <option value="{{this.key}}">{{this.value}}</option>
+                {{/each}}
+            {{/if}}
+          </select>
+      </div>
+    </div> 
+  </div>
+
+
+{{!-- <div id="logo" class="file has-name">
+  <label class="file-label">
+    <input class="file-input" type="file" name="logo">
+    <span class="file-cta">
+      <span class="file-icon">
+        <i class="fas fa-upload"></i>
+      </span>
+      <span class="file-label">
+        Dapp logo…
+      </span>
+    </span>
+    <span class="file-name">
+      No file uploaded
+    </span>
+  </label>
+</div> --}}
+
+
+
+
+
+
+
+  <div class="field is-grouped">
+    <div class="control">
+        <input class="button is-link" type="submit" value="Submit">
+      {{!-- <button class="button is-link">Submit</button> --}}
+    </div>
+    {{!-- <div class="control">
+      <button class="button is-link is-light">Cancel</button>
+    </div> --}}
+  </div>
+
+  </form>
+</section>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+{{#extend "js"}}
+
+<script>
+  const fileInput = document.querySelector('#file-js-example input[type=file]');
+  fileInput.onchange = () => {
+    if (fileInput.files.length > 0) {
+      const fileName = document.querySelector('#file-js-example .file-name');
+      fileName.textContent = fileInput.files[0].name;
+    }
+  }
+</script>
+
+{{/extend}}

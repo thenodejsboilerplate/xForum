@@ -1,0 +1,132 @@
+<!--if the single page has the single css file,then use the folling-->
+{{#extend "css"}}
+{{!-- <style>
+            <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.1.1/css/fontawesome.min.css" crossorigin="anonymous">  
+</style> --}}
+<style>
+    .icon-text{
+        border-bottom: 0.1px solid white;
+        padding-bottom: 1rem;
+        margin-bottom: 1rem;
+    }
+    .tile{
+        flex-wrap: wrap!important;
+    }
+  
+    .tile.is-child{
+    margin-right: 2rem!important;
+    margin-bottom: 2rem !important;
+    }
+</style>
+{{/extend}}
+
+{{> general/header}}
+
+
+<section style="margin:0 1rem; margin-top:4rem; ">
+
+
+<h2 class="title">#NFT SMART CONTRACT</h2>
+<div class="tile is-ancestor">
+
+  <div class="tile is-parent">
+
+     {{#if projects}}
+
+        {{#each projects}}
+    <article class="tile is-child box notification is-{{scamLevel}} is-3">
+
+        <div class="icon-text">
+        <span class="icon has-text-{{scamLevel}}">
+            {{#if isPrimary}}
+                    <i class="fas fa-check-square has-text-white" ></i>
+                  {{else isDanger}}
+                    <i class="fas fa-ban has-text-white" ></i>
+                  {{else isWarning}}
+                    <i class="fas fa-exclamation-triangle has-text-white"></i>
+
+            {{/if}}
+        </span>
+        <span>
+             {{#if isPrimary}}
+                Checked
+               {{else isDanger}}
+                Danger
+               {{else isWarning}}
+                Warning
+            {{/if}}
+
+        </span>
+        </div>
+
+        <p class="title"><a href="/project/detail?id={{_id}}">{{projectName}}</a> </p>
+        <p class="subtitle">{{detail}}</p>
+    </article>
+      {{/each}}
+
+
+    {{!-- <article class="tile is-child box notification is-warning is-3">
+
+        <div class="icon-text">
+        <span class="icon has-text-warning">
+        <i class="fas fa-exclamation-triangle has-text-white"></i>
+        </span>
+        <span>Warning</span>
+        </div>
+
+        <p class="title">Third column</p>
+        <p class="subtitle">With some content</p>
+        <div class="content">
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Proin ornare magna eros, eu pellentesque tortor vestibulum ut. Maecenas non massa sem. Etiam finibus odio quis feugiat facilisis.</p>
+        </div>
+    </article>
+
+
+      <article class="tile is-child box notification is-primary is-3">
+
+        <div class="icon-text">
+        <span class="icon has-text-success" >
+        <i class="fas fa-check-square has-text-white" ></i>
+        </span>
+        <span>Passed</span>
+        </div>
+
+        <p class="title">Foo</p>
+        <p class="subtitle">Bar</p>
+    </article> --}}
+
+    {{/if}}
+
+
+
+
+  </div>
+
+
+
+
+
+
+
+
+
+
+
+
+</div>
+</section>
+
+
+
+
+<section style="margin:0 2rem; margin-top:4rem; ">
+
+<h2 class="title">SEARCH HISTORY</h2>
+
+</section>
+
+
+
+{{#extend "js"}}
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+{{/extend}}

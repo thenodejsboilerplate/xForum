@@ -1,0 +1,87 @@
+/**
+    <div class="postsList">
+    
+        <div class="itemWrapper">
+            <div class="spanWrapper">
+                <h4>
+                    Middle Aligned    Middle Aligned 
+                </h4> 
+                <p><a href="">我们取药ID就看见肯德基 放得开发空间打开分附近的， 大姐夫看得见款发</a></p>
+                <span class="itemIssuedDate">
+                    2019-29-24
+                </span>
+            </div><!--
+         --><div class="rightImg" >
+                  <img src="/img/airdrop.jpg" >
+            </div>
+        </div>
+        <div class="ui divider"></div>
+
+
+    </div>
+**/
+
+.postsList{
+    margin:0;
+
+    padding: 0 0.5rem;
+   // border:1px solid black;
+
+
+    .itemWrapper{
+       // border: 1px solid olive;
+        padding: 0.5rem 0;
+        height: 120px;
+        
+
+        .spanWrapper{
+            display: inline-block;
+            width: 74%;
+           // border: 1px solid green;
+            height: 100%;
+            padding-right:1rem;
+            
+            h4{
+                margin-bottom: 1.9rem;
+                margin-top:0;
+            }
+            p{
+                margin-bottom: 1rem;
+                font-size: 0.8rem;
+
+                a{
+                    color: darken(grey,10%);
+                }
+            }
+            span.itemIssuedDate{
+                display: block;
+                font-size: 0.6rem;
+                color: grey;
+            }
+
+        }
+
+
+    }
+
+    .rightImg{
+        display: inline-block;
+        width: 26%;
+       // border: 1px solid yellow;
+        height: 100%;
+
+        img{
+            width: 100%;
+            display: block;
+            height: 100%;
+            border-radius: 5px;
+        }
+    }
+
+    p.noContent{
+        text-align: center;
+        margin-top: 3rem;
+        color: darken(#e3e3e3, 15%);
+        font-size: 0.7rem;
+    }
+}

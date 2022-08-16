@@ -1,0 +1,38 @@
+
+                <div class="recom rightSection">
+                    <h3><i class="green radio icon"></i> 每周推荐 </h3>
+                     
+                       {{#if data.weeklyRec}}
+                     <span> <strong>“{{data.weeklyRec.projectName}}”</strong></span>
+                     <p><a href="/dir/detail?id={{data.weeklyRec._id}}">{{data.weeklyRec.brief}}</a></p>
+                       {{/if}}
+                </div>
+
+
+
+                <div class="hotTags rightSection">
+                    <h3><i class="red radio icon"></i> 热门标签 </h3>
+
+                     
+                     <p>
+                         <span>区块链</span> <span>比特币</span> <span>政策法规</span> <span>韩国</span> <span>以太坊</span> <span>分叉</span> <span>ICO</span> <span>日本</span> <span>加密猫</span> <span>加密狗</span> <span>LTC</span> <span>360</span>
+                         <span>挖矿</span>
+                     </p>
+
+                </div>
+
+
+                <div class="blockView rightSection">
+                    <h3><i class="green radio icon"></i> 区块查询 </h3>
+
+                     <p><strong>BTC 比特币</strong> <a href="https://blockchain.info/" target="_blank">Blockchain</a></p>
+                     <p> <strong>BCH BCC</strong> <a href="https://blockdozer.com/" target="_blank">BlockDozer</a></p>
+                     <p> <strong>ETH 以太坊</strong> <a href="https://etherscan.io/" target="_blank">EtherScan</a></p>
+                     <p><strong>LTC 莱特币</strong> <a href="http://qukuai.com/ltc" target="_blank">LTC 区块</a></p>
+                     <p><strong>XMR 门罗</strong> <a href="https://moneroexplorer.com/" target="_blank">MoneroExplorer</a></p>
+                     <p><strong>Zcash ZEC</strong> <a href="https://explorer.zcha.in/" target="_blank">ZCHAIN</a></p>
+                     <p><strong>ETC</strong> <a href="https://gastracker.io/" target="_blank">GasTracker</a></p>
+                     <p><strong>Ripple</strong> <a href="https://bithomp.com/explorer/" target="_blank">Ripple Explorer</a></p>
+                     <p><strong>Lisk LSK</strong> <a href="https://explorer.lisk.io/" target="_blank">Lisk Blockchain Explore</a></p>
+
+                </div>

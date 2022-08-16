@@ -1,0 +1,66 @@
+{{> general/header}}
+{{#extend "css"}}
+  <style>
+   .formHeader{
+        font-size: 2rem; 
+        margin-bottom:4rem;
+        text-align:center;
+    }
+    .errorMessage{
+      padding:1rem 1rem;
+    }
+
+    @media screen and (min-width: 768px){
+
+
+    }
+    @media screen and (max-width: 768px){
+
+    }
+  </style>
+{{/extend}}
+
+{{#if project}}
+<div class="contentBlock">
+
+    <div class="ui column grid" style="margin-top: 0.5rem;">
+            <div class="eleven wide computer sixteen wide mobile column stackable leftBlock"> 
+                    {{> general/message}}
+                    <div class="errorMessage">
+                        <div class="ui basic">
+                            
+                            <h2 class="formHeader">{{project.projectName}} 存在错误信息或数据 ？</h2>
+                            <form class="ui form" method="POST" action="/dir/existError">
+                                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                                <div class="field">
+                                    <label>错误内容反馈</label>
+                                    <textarea name="content"></textarea>
+                                </div>
+
+                                 <input type="text" name="project_id" value="{{project._id}}" style="visibility: hidden;">
+                                {{!-- <div class="field">
+                                    <label>Password （密码）</label>
+                                    <input type="text" name="password">
+                                </div> --}}
+                                <p>我们会认真对待每一个反馈，仔细核实，核实正确会提交开发人员立即修改； 并奖励相应平台积分（后续可转成虚拟货币）</p>
+                                <input class="ui button" type="submit" value="提交">
+                            </form>
+                            {{!-- <br>                            --}}
+                            {{!-- <div class="ui bottom attached warning message">
+                            <i class="icon help"></i>
+                            还未注册? <a href="/user/signup">注册</a>.
+                            </div> --}}
+                        </div>
+                    </div>
+            </div>
+
+            <div class="four wide computer sixteen wide mobile column stackable rightBlock">
+                {{> general/rightBlock}}
+
+            </div>
+
+
+
+    </div>
+</div>
+{{/if}}

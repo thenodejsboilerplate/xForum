@@ -1,0 +1,1412 @@
+<!--if the single page has the single css file,then use the folling-->
+{{#extend "css"}}
+<style>
+</style>
+{{/extend}}
+
+{{> general/header}}
+{{!-- <div class="secondHeader">
+    <p>
+        <span class="secondaryBrandName">BTC210</span> 
+        <span class="tip"> #区块链点评 #导航</span>
+    </p>
+</div> --}}
+{{!-- <p class="homeBread"><i class="home icon"></i> 首页</p> --}}
+
+<div class="contentBlock home">
+
+    <div class="ui column grid" style="margin-top: 0.5rem;">
+            <div class="twelve wide computer sixteen wide mobile column stackable leftBlock"> 
+                <div class="menuBar">
+                    <a href="#hots" class="menu-hots">#热门推荐</a>
+                    <a href="#application">#区块链应用及技术</a>
+                    <a href="#assets">#区块链资产</a>
+                    <a href="#media">#区块链资讯</a>
+                    <a href="#payment">#钱包支付</a>
+                    <a href="#tranction">#交易理财</a>
+                </div>
+                <div class="hots categ" id="hots">
+                        <h2 class="keywords">热门推荐</h2>
+                    {{!-- <div class=""> --}}
+                        <div class="ui four column grid stackable smBlock">
+                            <div class="column">
+                                <a href="https://bitcoin.org/zh_CN/" target="_blank">Bitcoin.org</a> 
+                                <p>比特币知名网站，由比特币元老级人物Satoshi Nakamoto 和 Martti Malmi 发起</p>
+                            </div>
+                            <div class="column">
+                                <a href="https://blockchain.info/" target="_blank">BLOCKCHAIN</a> 
+                                <p>最流行的比特币钱包和区块查询网站</p>
+                            </div>
+                            <div class="column">
+                                <a href="https://www.coindesk.com/" target="_blank">Coindesk</a> 
+                                <p>CoinDesk是由流媒体音乐服务商Spotify的投资人沙克尔汗推出的一个涵盖全球比特币新闻资源的网站 </p>
+                            </div>
+                            <div class="column">
+                                <a href="https://jaxx.io/" target="_blank">JAXX</a>
+                                <p>一款由来自加拿大的团队开发的数字资产钱包, 支持多个加密货币, 可在安卓, iOS, 桌面端以及网页端使用</p>
+                            </div>
+
+                            <div class="column">
+                                <a href="https://www.bitfinex.com/" target="_blank">Bitfinex</a> 
+                                <p>Raphael NICOLLE成立的著名加密货币交易所 </p>
+                            </div>
+                            <div class="column">
+                                <a href="https://www.stateofthedapps.com/" target="_blank">以太坊应用列表</a>
+                                <p>收录使用以太坊技术建立的各种技术开发项目</p>
+                            </div>
+                            <div class="column">
+                                <a href="http://moneropool.com" target="_blank">MoneroPool矿池</a>
+                                <p>著名的Monero门罗币矿池 </p>
+                            </div>
+
+                        </div>
+                    {{!-- </div> --}}
+                </div>
+
+
+
+                <div class="btcTech categ" id="application">
+                    <h2 class="keywords">区块链技术及应用</h2>
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>底层技术<h3> 
+                            {{!-- <p>IBM开发者社区Java 技术, 文章, 教程,</p> --}}
+                        </div>
+
+                        {{#each data.lowLayer_Appli}}
+                        <div class="column">
+                            <i class="currency {{this.imgName}}"></i>
+                            <a href="/dir/detail?id={{this._id}}" target="_blank">{{this.projectName}}</a> 
+                            <p>{{this.brief}}</p>
+                        </div>
+                        {{/each}}
+                        {{!-- <div class="column">
+                            <a href="/dir/detail?id=5abdc061d3f5ddfe76905fb3" target="_blank">ETH (以太坊)</a> 
+                            <p>开源的有智能合约功能的公共区块链平台。通过其专用加密货币以太币（Ether，又称"以太币"）提供去中心化的虚拟机</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.eos.io" target="_blank">EOS</a> 
+                            <p>被称为区块链第一个"商业级"操作系统</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.ipfs.io" target="_blank">IPFS（星际文件系统）</a> 
+                            <p>InterPlanetary File System, 面向全球的、点对点的分布式版本文件系统,目标是为了补充(甚至是取代)目前统治互联网的超文本传输协议(HTTP)</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://wanchain.org" target="_blank">Hyperledger（超级账本）</a> 
+                            <p>Linux基金的开源项目，发展一个跨行业的开放式标准以及开源代码开发库，允许企业创建自定义的分布式账本解决方案</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://wanchain.org" target="_blank">万维链（Wanchain）</a> 
+                            <p>建立一个基础设施,能够以去中心化的方式完成不同区块链网络的连接及价值的交换</p>
+                        </div> --}}
+
+                        
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                        {{!-- <div class="sixteen column row subCateg">
+                            <h3>以太坊</h3> 
+                        </div>  --}}
+                        <div class="column subCateg">
+                            <h3>以太坊</h3> 
+                        </div> 
+
+                        {{#each data.ETH_Appli}}
+                        <div class="column">
+                            <a href="/dir/detail?id={{this._id}}" target="_blank">{{this.projectName}}</a> 
+                            <p>{{this.brief}}</p>
+                        </div>
+                        {{/each}}
+
+
+                        
+                        {{!-- <div class="column">
+                            <a href="https://www.stateofthedapps.com/" target="_blank">以太坊应用</a> 
+                            <p>State of the Dapps. 以太坊应用聚合网站</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="www.cipherbrowser.com" target="_blank">Cipher Browser</a> 
+                     
+                            <p>免费的移动以太坊钱包和Web3 Dapp 浏览器</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://makerdao.com" target="_blank">MakerDAO</a> 
+            
+                            <p>最早的去中心化自治组织（DAO）之一，为以太坊区块链提供稳定货币</p>
+                        </div> --}}
+
+                       {{!-- <div class="column">
+                            <a href="https://www.omise.co">Blockchain for Social Impact Coalition</a> 
+                            <p>a free mobile Ethereum wallet and web3 dapp browser</p>
+                            <p>Incubates, develops, and implements confederated blockchain products and solutions that can address social and environmental challenges across the United Nation’s Sustainable Development Goals</p>
+                     </div> --}}
+
+                     {{!-- <div class="column">
+                            <a href="https://www.omise.co">District0x</a> 
+                            <p>a free mobile Ethereum wallet and web3 dapp browser</p>
+                            <p>District0x是一个建立在以太坊,Arogon(去中心化自治组织项目)和IPFS项目(分布式存储)之上的去中心化的市场和社区网络</p>
+                     </div> --}}
+
+                        {{!-- <div class="column">
+                            <a href="https://www.ethereum.org/foundation" target="_blank">以太坊基金会</a> 
+                            <p>管理以太币销售中筹措的基金,以更好地为以太坊和去中心化技术生态系统服务</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://entethalliance.org" target="_blank">企业以太坊联盟(EEA)</a> 
+                            <p>并非以营利为目的，为以太坊创建一系列关于最佳实践、安全性、隐私权、扩容性和互操作性的标准</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://melonport.com" target="_blank">Melon（梅隆）协议</a> 
+                            <p>一种以太坊上的数字资产管理的区块链协议，它允许参与者用公开、竞争和去中心化的方式发起、管理和投资数字资产</p>
+                        </div> --}}
+
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                        {{!-- <div class="sixteen column row subCateg">
+                            <h3>以太坊</h3> 
+                        </div>  --}}
+                        <div class="column subCateg">
+                            <h3>知识版权</h3> 
+                        </div> 
+                        <div class="column">
+                            <a href="https://steemit.com" target="_blank">Steemit</a> 
+                            <p>基于区块链(blockchain)的社交媒体平台,生产和发布信息并获得虚拟币(Steem)回报</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://www.yours.network" target="_blank">Synereo</a> 
+                            <p>通过提供比特币激励，为内容创造以及社区互动灌入新的生命力，例如评论以及图片共享</p>
+                        </div>
+
+
+                        <div class="column">
+                            <a href="https://decent.ch" target="_blank">DECENT</a> 
+                            <p>基于区块链技术的分布式自运行组织,针对创意人、作者、博主和出版商及其粉丝的发布平台</p>
+                        </div>
+                        <div class="column">
+                            <a href="http://ebookchain.org" target="_blank">亿书</a> 
+                            <p>基于区块链保护个人数据，实现知识聚合、知识付费</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://akasha.world" target="_blank">AKASHA</a> 
+                            <p>运行在以太坊世界计算机和星际文件系统上的社交网络</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.yours.network" target="_blank">Yours</a> 
+                            <p>通过提供比特币激励，为内容创造以及社区互动灌入新的生命力，例如评论以及图片共享</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://joincivil.com/" target="_blank">Civil</a> 
+                            <p>为新闻人物——作家，编辑，摄影师，事实调查员——提供经济激励和治理结构来进行自我组织</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.codexprotocol.com/" target="_blank">Codex Protocol</a> 
+                            <p>专注于服务艺术和收藏品生态系统的去中心化所有权登记系统</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://yoyow.org/" target="_blank">YOYOW</a> 
+                            <p>基于区块链的内容创造和分享平台</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://golos.blog/" target="_blank">Golos</a> 
+                            <p>授权于Steemit的，限俄语区使用的基于石墨烯区块链的去中心化社交媒体平台</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://bihu.com" target="_blank">币乎</a> 
+                            <p>基于区块链的身份系统，保护用户财产、数据和隐私</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://golos.blog/" target="_blank">Golos</a> 
+                            <p>授权于Steemit的，限俄语区使用的基于石墨烯区块链的去中心化社交媒体平台</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://po.et/cn/" target="_blank">Po.et</a> 
+                            <p>Po.et 是一个共享、开放、通用的创意资产账本</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://cctime.org/" target="_blank">CCTime(加密货币时讯)</a> 
+                            <p>基于阿希(Asch)侧链技术开发的分布式社会新闻分享与交流平台</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://singulardtv.com/" target="_blank">SingularDTV</a> 
+                            <p>基于区块链技术建立的去中心化影视娱乐平台，通过智能合约实现作品的版权管理、项目众筹和P2P发行，并让艺术家和创作者对作品的制作、发行、播放进行全周期的权益管理</p>
+                        </div>
+
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                        {{!-- <div class="sixteen column row subCateg">
+                            <h3>以太坊</h3> 
+                        </div>  --}}
+                        <div class="column subCateg">
+                            <h3>资产交易</h3> 
+                        </div> 
+                        <div class="column">
+                            <a href="https://0xproject.com/">0x</a> 
+                            <p>基于以太坊区块链的去中心化交易所开源协议,让任何人都能开设和运行去中心化交易所</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://melonport.com" target="_blank">Melon（梅隆）协议</a> 
+                            <p>一种以太坊上的数字资产管理的区块链协议，它允许参与者用公开、竞争和去中心化的方式发起、管理和投资数字资产</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://oasisdex.com/" target="_blank">OasisDEX</a> 
+                            <p>去中心化交易所</p>
+                        </div>
+                        <div class="column">
+                            <a href="http://weifund.io/" target="_blank">WeiFund</a> 
+                            <p>基于以太坊的众筹平台</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://digix.global/cn/" target="_blank">Digix</a> 
+                            <p>建立一个与实物黄金锚定的稳定货币</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.wetrust.io/" target="_blank">WeTrust</a> 
+                            <p>在Ethereum区块链上自主创建和管理数字标会。组建新的标会，构思个性化的协议，并且参与管理交易和会员记录</p>
+                        </div>
+                        <div class="column">
+                            <a href="http://colu.com/" target="_blank">Colu</a> 
+                            <p>通过区块链技术来实现所有权的转移，让那些不懂比特币的开发商和消费者也能够通过该平台创建和交换资产，从金融资产（股票、债券、股票）到记录（证书，版权，文件）再到所有权（活动门票、代金券、礼品卡）</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://symbiont.io/" target="_blank">Symbiont</a> 
+                            <p>建立第一个用于发行区块链智能证券和交易智能证券的平台</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://tzero.com/" target="_blank">Tzero</a> 
+                            <p>将区块链技术与现有的市场交易流程集成在一起,以减少结算时间和成本,提高透明度,效率和可审计性</p>
+                        </div>                        
+                        <div class="column">
+                            <a href="https://reitschain.com/" target="_blank">瑞资链</a> 
+                            <p>致力于ABC(Asset-Backed-Chain)的搭建,运用区块链技术为资产证券化和房地产投融资服务提供一站式的解决方案；利用区块链公开透明和数字资产高流动性和跨境流动的特点,创建一个面向全球的数字资产交易平台</p>
+                        </div>   
+                        <div class="column">
+                            <a href="https://www.openanx.org/sc/" target="_blank">openANX</a> 
+                            <p>创新、开源、去中心化的交易平台</p>
+                        </div>   
+
+
+
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                        {{!-- <div class="sixteen column row subCateg">
+                            <h3>以太坊</h3> 
+                        </div>  --}}
+                        <div class="column subCateg">
+                            <h3>公证防伪</h3> 
+                        </div> 
+
+                        <div class="column">
+                            <a href="https://www.factom.com/">Factom（公证通）</a> 
+                            <p>利用区块链技术帮助各种各样应用程序的开发，包括审计系统，医疗信息记录，供应链管理，投票系统，财产契据，法律应用，金融系统等</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://www.civic.com/">Civic</a> 
+                            <p>基于区块链和生物识别的多因素身份认证系统</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://stampery.com/">Stampery</a> 
+                            <p>用比特币的区块链代替公证人,给敏感文件提供具有法律约束力的证明</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://shocard.com/">Shocard</a> 
+                            <p>利用区块链技术来验证身份</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.everledger.io/">Everledger</a> 
+                            <p>基于区块链的贵重资产检测系统。将比特币区块链和私链结合在一起创建智能合约，为用户检测钻石等贵重物品的真伪</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://blockscore.com/">BlockScore</a> 
+                            <p>提供身份证明服务 – 包括电子商务交易市场，金融机构和数字货币初创公司</p>
+                        </div>
+
+
+                       {{!-- <div class="column subCateg">
+                            <h3>区块查询</h3> 
+                        </div> 
+
+                        <div class="column">
+                            <a href="https://www.factom.com/">Factom（公证通）</a> 
+                            <p>利用区块链技术帮助各种各样应用程序的开发，包括审计系统，医疗信息记录，供应链管理，投票系统，财产契据，法律应用，金融系统等</p>
+                        </div> --}}
+
+
+                    </div>
+
+                </div>
+
+                <div class="assets categ" id="assets">
+                    <h2 class="keywords">区块链资产</h2>
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>数字资产</h3> 
+                        </div>
+                                {{#each data.currencies}}
+                                <div class="column">
+                                    <a href="/dir/detail?id={{this._id}}" target="_blank">{{this.projectName}}</a> 
+                                    <p>{{this.brief}}</p>
+                                </div>
+                                {{/each}}
+                        
+                        
+                        {{!-- <div class="column">
+                            <a href="https://bitcoin.org/zh_CN/" target="_blank">BTC (比特币)</a> 
+                            <p>P2P形式的数字货币</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://litecoin.org/cn/" target="_blank">LTC（莱特币）</a> 
+                            <p>受到了比特币（BTC）的启发，并且在技术上具有相同的实现原理，旨在改进比特币</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.ethereum.org/" target="_blank">ETH (以太坊)</a> 
+                            <p>开源的有智能合约功能的公共区块链平台</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.bitcoincash.org/" target="_blank">BCC (比特币现金)</a> 
+                            <p>由一小部分比特币开发者推出的不同配置的新版比特币</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://ethereumclassic.github.io/" target="_blank">ETC (以太经典)</a> 
+                            <p>以太坊分叉币，更注重去中心化</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://ripple.com/" target="_blank">Ripple (瑞波币)</a> 
+                            <p>Ripple 是一种互联网交易协议，它允许人们用任意一种货币进行支付</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://getmonero.org/" target="_blank">Monero (门罗币)</a> 
+                            <p>着重于隐私、分权和可扩展性</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://z.cash/zh/index.html" target="_blank">Zcash</a> 
+                            <p>使用先进的密码学技术提供交易隐私和可选择的透明性</p>
+                        </div>
+                        <div class="column">
+                            <a href="http://dogecoin.com/" target="_blank">狗狗币</a> 
+                            <p>民间发起的全球通用货币，具有全球转帐速度快的优点</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.dash.org/cn/" target="_blank">达世币</a> 
+                            <p>第一个以保护隐私为要旨的数字货币</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.stellar.org/" target="_blank">恒星币</a> 
+                            <p>搭建一个数字货币与法定货币之间传输的去中心化网关</p>
+                        </div> --}}
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                        
+                        <div class="column subCateg">
+                            <h3>PoW</h3> 
+                        </div>
+                        {{#each data.pow}}
+                        <div class="column">
+                            <a href="/dir/detail?id={{this._id}}" target="_blank">{{this.projectName}}</a> 
+                            <p>{{this.brief}}</p>
+                        </div>
+                        {{/each}}
+
+                        {{!-- <div class="column">
+                            <a href="https://bitcoin.org/zh_CN/" target="_blank">BTC (比特币)</a> 
+                            <p>P2P形式的数字货币</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://litecoin.org/cn/" target="_blank">LTC（莱特币）</a> 
+                            <p>受到了比特币（BTC）的启发，并且在技术上具有相同的实现原理，旨在改进比特币</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.ethereum.org/" target="_blank">ETH (以太坊)</a> 
+                            <p>开源的有智能合约功能的公共区块链平台</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.bitcoincash.org/" target="_blank">BCC (比特币现金)</a> 
+                            <p>由一小部分比特币开发者推出的不同配置的新版比特币</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://ethereumclassic.github.io/" target="_blank">ETC (以太经典)</a> 
+                            <p>以太坊分叉币，更注重去中心化</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://z.cash/zh/index.html" target="_blank">Zcash</a> 
+                            <p>使用先进的密码学技术提供交易隐私和可选择的透明性</p>
+                        </div>
+                        <div class="column">
+                            <a href="http://dogecoin.com/" target="_blank">狗币</a> 
+                            <p>民间发起的全球通用货币，具有全球转帐速度快的优点</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.dash.org/cn/" target="_blank">达世币</a> 
+                            <p>第一个以保护隐私为要旨的数字货币</p>
+                        </div> --}}
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>PoS</h3> 
+                        </div>
+                        {{#each data.pos}}
+                        <div class="column">
+                            <a href="/dir/detail?id={{this._id}}" target="_blank">{{this.projectName}}</a> 
+                            <p>{{this.brief}}</p>
+                        </div>
+                        {{/each}}
+                        {{!-- <div class="column">
+                            <a href="https://www.ethereum.org/" target="_blank">ETH (以太坊)</a> 
+                            <p>开源的有智能合约功能的公共区块链平台</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://ethereumclassic.github.io/" target="_blank">ETC (以太经典)</a> 
+                            <p>以太坊分叉币，更注重去中心化</p>
+                        </div> --}}
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>DPoS</h3> 
+                        </div>
+                        {{#each data.dpos}}
+                        <div class="column">
+                            <a href="/dir/detail?id={{this._id}}" target="_blank">{{this.projectName}}</a> 
+                            <p>{{this.brief}}</p>
+                        </div>
+                        {{/each}} 
+                        {{!-- <div class="column">
+                            <a href="https://lisk.io/" target="_blank">Lisk</a> 
+                            <p>基于JavaScript的高度可扩展公共区块链</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.asch.so/" target="_blank">阿希(Asch)</a> 
+                            <p>国内分布式区块链应用平台,采用区块链侧链技术,实现区块链js开发、智能合约、数字资产发行等功能</p>
+                        </div> --}}
+                        
+                    </div>
+                </div>
+
+                <div class="categ" id="media">
+                    <h2 class="keywords">区块链资讯</h2>
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>热门资讯</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="https://thebitcoinnews.com/">TheBitcoinNews</a> 
+                            <p>比特币新闻资讯（English）</p>
+                        </div>
+                        <div class="column">
+                            <a href="http://www.8btc.com/">巴比特</a> 
+                            <p>比特币新闻资讯</p>
+                        </div>
+                    </div>
+
+                    <div class="ui five column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>媒体</h3>  <br>
+                            {{!-- <p>区块链新闻资讯</p> --}}
+                        </div>
+
+                        {{#each data.media}}
+                        <div class="column">
+                            <a href="/dir/detail?id={{this._id}}" target="_blank">{{this.projectName}}</a> 
+                            <p>{{this.brief}}</p>
+                        </div>
+                        {{/each}} 
+
+                        {{!-- <div class="column">
+                            <a href="https://cointelegraph.com/">Coin Telegraph</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://www.coindesk.com/">Coindesk</a> 
+                        </div>
+                        <div class="column">
+                            <a href="http://fortune.com/section/ledger/">财富杂志</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://etherreview.info/">Ether Review</a> 
+                        </div>
+                        <div class="column">
+                            <a href="http://btcmanager.com/">Btc Manager</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://coinjournal.net/">Coin Journal</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://bitcoinmagazine.com/">比特币杂志</a> 
+                        </div>
+                        <div class="column">
+                            <a href="http://www.coinfox.info/">Coin Fox</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://coincenter.org/">Coin Center/</a> 
+                        </div>
+                        <div class="column">
+                            <a href="http://www.8btc.com/">巴比特</a> 
+                        </div>
+
+                        <div class="column">
+                            <a href="http://www.jinse.com/">金色财经</a> 
+                        </div> --}}
+
+
+
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>微博</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="http://weibo.com/6269270559">SegWit2x小组</a> 
+                        </div>
+                        <div class="column">
+                            <a href="http://weibo.com/bylixiaolai">李笑来</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://weibo.com/607123188?from=myfollow_all&is_all=1">辛泓睿</a> 
+                            <p>财经博主 #区块链#超级话题主持人 资讯视频自媒体</p>
+                        </div>                        
+                        <div class="column">
+                            <a href="http://weibo.com/3244140934">洋洋访谈</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://weibo.com/bitcoinqqagent?is_hot=1">比特币QQagent</a> 
+                        </div>
+
+                        <div class="column">
+                            <a href="https://weibo.com/sossion">张寿松</a> 
+                            <p>人人折研发副总裁，原团138网创始人兼CEO</p>
+                        </div>
+                        <div class="column">
+                            <a href="http://weibo.com/BobbyChristopherLee">李启元</a> 
+                            <p>比特币中国CEO，联合创始人</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://weibo.com/phystar">徐明星</a> 
+                            <p>OKCoin创始人</p>
+                        </div>
+
+
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>社区</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="https://etherian.world/" target="_blank">the Etherian</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://www.reddit.com/r/Bitcoin/" target="_blank">Reddit 比特币</a> 
+                        </div>
+                        <div class="column">
+                            <a href="http://8btc.com/" target="_blank">巴比特论坛</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://www.reddit.com/r/Bitcoin/" target="_blank">Reddit 以太坊</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://www.meetup.com/topics/ethereum/" target="_blank">以太坊活动</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://xmr-tw.org/" target="_blank">Monero 台湾正體中文站</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://bitcointalk.org/index.php?board=30.0" target="_blank">BitcoinTalk 中文</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://media.consensys.net/" target="_blank">ConsenSys Media</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://gitter.im/ethereum/" target="_blank">GITTER 以太坊区</a> 
+                        </div>
+                        <div class="column">
+                            <a href="https://www.bitask.org" target="_blank">币问</a> 
+                        </div>
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                            <div class="column subCateg">
+                                <h3>人物</h3> 
+                            </div>
+                            <div class="column">
+                                <a href="http://gavwood.com/" target="_blank">Gavin Wood</a> 
+                            </div>
+
+                            <div class="column">
+                                <a href="https://rogerver.com/" target="_blank">Roger Ver</a> 
+                            </div>
+                            <div class="column">
+                                <a href="http://gavinandresen.ninja/" target="_blank">Gavin Andresen</a> 
+                            </div>
+                            <div class="column">
+                                <a href="http://vitalik.ca/" target="_blank">Vitalik Buterin</a> 
+                            </div>
+                            <div class="column">
+                                <a href="https://etherian.world/" target="_blank">the Etherian</a> 
+                            </div>
+                            <div class="column">
+                                <a href="http://www.chaum.com/" target="_blank">David Chaum</a> 
+                            </div>
+                            <div class="column">
+                                <a href="hhttp://adam3.us/" target="_blank">Adam Back</a> 
+                            </div>
+                            <div class="column">
+                                <a href="http://ummjackson.com/" target="_blank">Jackson Palmer</a> 
+                            </div>
+                            <div class="column">
+                                <a href="https://bytemaster.github.io/" target="_blank">Bytemaster</a> 
+                            </div>
+                            <div class="column">
+                                <a href="https://www.forbes.com/sites/laurashin/" target="_blank">Laura Shin</a> 
+                            </div>
+                            <div class="column">
+                                <a href="http://xk.io/" target="_blank">Max Kaye</a> 
+                            </div>
+                            <div class="column">
+                                <a href="https://soundcloud.com/arthurfallss" target="_blank">Arthur Falls</a> 
+                            </div>
+
+                            <div class="column">
+                                <a href="http://avc.com/" target="_blank">Peter Van Valkenburgh</a> 
+                            </div>
+                            <div class="column">
+                                <a href="http://xk.io/" target="_blank">Fred Wilson</a> 
+                            </div>
+                            <div class="column">
+                                <a href="http://jedmccaleb.com/" target="_blank">Jed McCaleb</a> 
+                            </div>
+                            <div class="column">
+                                <a href="http://martin.swende.se/" target="_blank">Martin Swende</a> 
+                            </div>
+                            <div class="column">
+                                <a href="https://www.ariannasimpson.com/" target="_blank">Arianna Simpson</a> 
+                            </div>
+                            <div class="column">
+                                <a href="http://stephantual.com/" target="_blank">Stephan Tual</a> 
+                            </div>
+                            <div class="column">
+                                <a href="http://sammantics.com/" target="_blank">George Samman</a> 
+                            </div>
+
+                            <div class="column">
+                                <a href="http://ciphron.netsoc.ie/" target="_blank">Michael Clear</a> 
+                            </div>
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                            <div class="column subCateg">
+                                <h3>以太坊</h3> 
+                            </div>
+                            <div class="column">
+                                <a href="https://gitter.im/ethereum/" target="_blank">GITTER 以太坊区</a> 
+                            </div>
+                            <div class="column">
+                                <a href="https://www.reddit.com/r/ethereum/" target="_blank">Reddit 以太坊区</a> 
+                            </div>
+                            <div class="column">
+                                <a href="https://media.consensys.net/" target="_blank">ConsenSys Media</a> 
+                            </div>
+                            <div class="column">
+                                <a href="http://vitalik.ca/" target="_blank">Vitalik Buterin</a> 
+                            </div>
+                            <div class="column">
+                                <a href="https://www.meetup.com/topics/ethereum/" target="_blank">以太坊活动</a> 
+                            </div>
+                            <div class="column">
+                                <a href="https://etherian.world/" target="_blank">the Etherian</a> 
+                            </div>
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                                <div class="column subCateg">
+                                    <h3>比特币</h3> 
+                                </div>
+                                <div class="column">
+                                    <a href="https://bitcointalk.org/index.php?board=30.0" target="_blank">BitcoinTalk 中文区</a> 
+                                </div>
+                                <div class="column">
+                                    <a href="https://www.reddit.com/r/Bitcoin/" target="_blank">Reddit 比特币区</a> 
+                                </div>
+                    </div>
+                </div>
+
+                <div class="categ" id="payment">
+                    <h2 class="keywords">钱包支付</h2>
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>热门钱包</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="https://bitcoin.org/zh_CN/download" target="_blank">Bitcoin Core</a> 
+                            <p>比特币官方(bitcoin.org)钱包客户端</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://blockchain.info/zh-cn/wallet/" target="_blank">BLOCKCHAIN</a> 
+                            <p>比特币钱包和区块查询网站</p>
+                        </div>
+                    </div>
+
+
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>手机钱包</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="https://blockchain.info/zh-cn/wallet/" target="_blank">BLOCKCHAIN</a> 
+                            <p>最流行的比特币钱包和区块查询网站</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://jaxx.io/" target="_blank">JAXX</a> 
+                            <p>结合比特币和以太币的新型钱包，支持多种资产，全平台使用</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://wallet.btc.com/" target="_blank">BTC.com 钱包</a> 
+                            <p>支持Bitcoin和Bitcoin Cash</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://xapo.com/" target="_blank">Xapo</a> 
+                            <p>比特币的安全存储服务公司</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://copay.io/" target="_blank">Copay</a> 
+                            <p>开源的多重签名钱包项目 </p>
+                        </div>
+                        <div class="column">
+                            <a href="https://wallet.mycelium.com/cn/" target="_blank">MYCELIUM</a> 
+                            <p>比特币钱包，支持多种数字货币和基于区块链的资产 </p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.mobi.me/" target="_blank">mobi</a> 
+                            <p>BTCC发布的在线比特币钱包</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://wirexapp.com/zh-cn/" target="_blank">Wirex</a> 
+                            <p>比特币借记卡与虚拟比特币钱包, 支持主流加密货币</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.circle.com/" target="_blank">Circle</a> 
+                            <p>提供数字货币储存及国家货币兑换服务</p>
+                        </div>
+                    </div>
+
+
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>网页钱包</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="https://blockchain.info/zh-cn/wallet/" target="_blank">BLOCKCHAIN</a> 
+                            <p>最流行的比特币钱包和区块查询网站</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://jaxx.io/" target="_blank">JAXX</a> 
+                            <p>结合比特币和以太币的新型钱包，支持多种资产，全平台使用</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://wallet.btc.com/" target="_blank">BTC.com 钱包</a> 
+                            <p>支持Bitcoin和Bitcoin Cash</p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://www.myetherwallet.com/" target="_blank">MyEtherWallet</a> 
+                            <p>以太坊网页钱包</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.myetherwallet.com/" target="_blank">MyEtherWallet</a> 
+                            <p>以太坊网页钱包</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://metamask.io/" target="_blank">Metamask</a> 
+                            {{!-- <p>Metamask</p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://coinsbank.com/" target="_blank">CoinsBank</a> 
+                            {{!-- <p>Metamask</p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.ether.li/" target="_blank">Ether.Li</a> 
+                            {{!-- <p>Metamask</p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://tokenly.com/" target="_blank">Tokenly Pockets</a> 
+                            {{!-- <p>Metamask</p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://greenaddress.it/" target="_blank">Green Address</a> 
+                            {{!-- <p>Metamask</p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://strongcoin.com/" target="_blank">StrongCoin</a> 
+                            {{!-- <p>Metamask</p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.bitgo.com/solutions#wallet" target="_blank">BitGo</a> 
+                            {{!-- <p>Metamask</p> --}}
+                        </div>
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>支付</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="https://www.sendwyre.com/">Wyre</a> 
+                            {{!-- <p>IBM开发者社区Java 技术, 文章, 教程</p> --}}
+                        </div>
+
+                        <div class="column">
+                            <a href="https://payment21.com/">Payment21</a> 
+                            {{!-- <p>IBM开发者社区Java 技术, 文章, 教程</p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.gocoin.com/">GoCoin</a> 
+                            {{!-- <p>IBM开发者社区Java 技术, 文章, 教程</p> --}}
+                        </div>
+
+                        <div class="column">
+                            <a href="https://www.bitrefill.com/china/">Bitrefill</a> 
+                            {{!-- <p>IBM开发者社区Java 技术, 文章, 教程</p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://mainnet.yalls.org/">Y'alls</a> 
+                            {{!-- <p>IBM开发者社区Java 技术, 文章, 教程</p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://chronobank.io/">ChronoBank</a> 
+                            {{!-- <p>IBM开发者社区Java 技术, 文章, 教程</p> --}}
+                        </div>
+
+                        <div class="column">
+                            <a href="https://starblocks.acinq.co/">Starblocks</a> 
+                            {{!-- <p>IBM开发者社区Java 技术, 文章, 教程</p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="http://www.paycase.com/">Paycase</a> 
+                            {{!-- <p>IBM开发者社区Java 技术, 文章, 教程</p> --}}
+                        </div>
+
+
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                            <div class="column subCateg">
+                                <h3>桌面钱包</h3> 
+                            </div>
+                            <div class="column">
+                                <a href="https://jaxx.io/" target="_blank">JAXX</a> 
+                                <p>结合比特币和以太币的新型钱包，支持多种资产，全平台使用</p>
+                            </div>
+                            <div class="column">
+                                <a href="https://bitcoin.org/zh_CN/download" target="_blank">Bitcoin Core</a> 
+                                <p>结合比特币和以太币的新型钱包，支持多种资产，全平台使用</p>
+                            </div>
+                            <div class="column">
+                                <a href="https://electrum.org/" target="_blank">Electrum</a> 
+                                <p>轻量级比特币钱包,程序运营不需要下载区块链数据文件</p>
+                            </div>
+                            <div class="column">
+                                <a href="https://wirexapp.com/zh-cn/" target="_blank">Wirex</a> 
+                                <p>比特币借记卡与虚拟比特币钱包, 支持主流加密货币</p>
+                            </div>
+                            <div class="column">
+                                <a href="https://github.com/ethereum/mist/releases" target="_blank">Mist</a> 
+                                <p>比特币商家支付商，面向收取Bitcoin商户的支付解决方案,商户收到消费者的Bitcoin(必须是使用Bitcoin的个人消费者),通过BitPay把钱转成自己使用的货币</p>
+                            </div>
+
+
+                            <div class="column">
+                                <a href="https://www.bitgo.com/solutions#wallet" target="_blank">BitGo</a> 
+                                <p>比特币借记卡与虚拟比特币钱包, 支持主流加密货币</p>
+                            </div>
+
+                            <div class="column">
+                                <a href="https://bither.net/" target="_blank">比太钱包</a> 
+                            </div>
+                            <div class="column">
+                                <a href="https://strongcoin.com/" target="_blank">StrongCoin</a> 
+                            </div>
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                            <div class="column subCateg">
+                                <h3>硬件钱包</h3> 
+                            </div>
+                            <div class="column">
+                                <a href="https://www.ledgerwallet.com" target="_blank">Ledger</a> 
+                                <p>比特币硬件钱包，常见的主流加密数字货币 </p>
+                            </div>
+                            <div class="column">
+                                <a href="https://trezor.io" target="_blank">Trezor</a> 
+                                <p>比特币硬件钱包，常见的主流加密数字货币 </p>
+                            </div>
+                            <div class="column">
+                                <a href="https://choosecase.com/" target="_blank">Case</a> 
+                                <p>比特币硬件钱包，原CryptoLabs </p>
+                            </div>
+                            <div class="column">
+                                <a href="https://www.coolbitx.com/home-ch" target="_blank">Coolbitx</a> 
+                                <p>比特币硬件钱包，支持主流加密货币</p>
+                            </div>          
+                            {{!-- <div class="column">
+                                <a href="https://www.keepkey.com/" target="_blank">库神</a> 
+                                <p>比特币硬件钱包，支持主流加密货币</p>
+                            </div> --}}
+                            <div class="column">
+                                <a href="https://www.keepkey.com/" target="_blank">KeepKey</a> 
+                                <p>比特币硬件钱包，支持主流加密货币: bitcoin, bitcoin cash, ethereum, litecoin, dogecoin, dash, and namecoin</p>
+                            </div>
+
+                    </div>
+
+                    <div class="ui four column grid stackable smBlock">
+                                <div class="column subCateg">
+                                    <h3>全平台钱包</h3> 
+                                </div>
+                                <div class="column">
+                                    <a href="https://www.exodus.io/" target="_blank">EXODUS</a> 
+                                    <p>一款保护,管理和交换区块链资产的应用程序,是第一个内置ShapeShift的桌面多资产钱包,支持比特币,以太坊,莱特币,Dash,EOS等</p>
+                                </div>
+                                <div class="column">
+                                    <a href="https://copay.io/" target="_blank">Copay</a> 
+                                </div>
+                                <div class="column">
+                                    <a href="https://bitpay.com/" target="_blank">BitPay</a> 
+                                </div>
+                    </div>
+
+                   <div class="ui four column grid stackable smBlock">
+                                <div class="column subCateg">
+                                    <h3>比特币</h3> 
+                                </div>
+                                <div class="column">
+                                    <a href="https://bitcoin.org/zh_CN/download" target="_blank">Bitcoin Core</a> 
+                                    <p>比特币官方(bitcoin.org)钱包客户端</p>
+                                </div>
+
+                                <div class="column">
+                                    <a href="https://blockchain.info/zh-cn/wallet/" target="_blank">BLOCKCHAIN</a> 
+                                    <p>最流行的比特币钱包和区块查询网站</p>
+                                </div>
+                                <div class="column">
+                                    <a href="https://wallet.btc.com/" target="_blank">BTC.com 钱包</a> 
+                                    <p>支持Bitcoin和Bitcoin Cash</p>
+                                </div>
+                                <div class="column">
+                                    <a href="https://electrum.org/" target="_blank">Electrum</a> 
+                                    <p>轻量级比特币钱包,程序运营不需要下载区块链数据文件</p>
+                                </div>
+                    </div>
+
+                   <div class="ui four column grid stackable smBlock">
+                                <div class="column subCateg">
+                                    <h3>以太坊</h3> 
+                                </div>
+                                <div class="column">
+                                    <a href="https://github.com/ethereum/mist/releases" target="_blank">Ethereum</a> 
+                                    <p>以太坊图形界面钱包</p>
+                                </div>
+                                <div class="column">
+                                    <a href="https://www.myetherwallet.com/" target="_blank">MyetherWallet</a> 
+                                </div>
+                                <div class="column">
+                                    <a href="https://www.ether.li/" target="_blank">Ether.Li</a> 
+                                </div>
+                    </div>
+
+
+                </div>
+
+                <div class="categ" id="tranction">
+                    <h2 class="keywords">交易理财</h2>
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>交易平台</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="https://www.coinbase.com/" target="_blank">CoinBase</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.bithumb.com/" target="_blank">Bithumb</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.bitfinex.com/" target="_blank">Bitfinex</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.poloniex.com/" target="_blank">Poloniex(P网)</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://shapeshift.io/" target="_blank">ShapeShift</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://coincheck.com/cn/">coincheck</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://coinone.co.kr/" target="_blank">Coinone</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.bibox.com/" target="_blank">Bibox</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.bittrex.com/" target="_blank">bittrex(B网)</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.bitstamp.net/" target="_blank">Bitstamp</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="http://www.mixcoins.com/" target="_blank">MIXCOINS</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.cointiger.com/" target="_blank">CoinTiger</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.gdax.com/" target="_blank">GDAX</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.lbank.info/" target="_blank">LBank</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.bitmex.com/?lang=zh-CN" target="_blank">BitMEX</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.kraken.com/" target="_blank">Kraken</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://hitbtc.com/" target="_blank">HitBTC</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+
+                        <div class="column">
+                            <a href="https://www.korbit.co.kr/" target="_blank">Korbit</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="https://www.binance.com/" target="_blank">Binance(币安)</a> 
+                            {{!-- <p></p> --}}
+                        </div>
+                        <div class="column">
+                            <a href="/dir/detail?id=5ad012baf1181550696966bf" target="_blank">OKex</a> 
+                            <p>Okcoin交易所海外版</p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.gate.io" target="_blank">Gate.io</a> 
+                            <p>比特儿海外版</p>
+                        </div>
+
+                    </div>
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>去中心化交易平台</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="https://bitshares.org/"  target="_blank">Bitshare（比特股）</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://stellarterm.com/"  target="_blank">Stellar distributed Exchange</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://kyber.network/"  target="_blank">KyberNetwork</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://auroradao.com/"  target="_blank">Snowglobe</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://wavesplatform.com/"  target="_blank">Waves</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://lendroid.com/"  target="_blank">Lendroid</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.bancor.network/"  target="_blank">Bancor Protocol</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://bisq.network/"  target="_blank">Bisq</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://herdius.com/"  target="_blank">Herdius</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://nvo.io/"  target="_blank">NVO.io</a> 
+                            <p></p>
+                        </div>
+
+                        <div class="column">
+                            <a href="https://www.raidex.io/"  target="_blank">Raidex</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://xchain.io/"  target="_blank">Xchainge</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://etherdelta.com/"  target="_blank">Etherdelta</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://enigmampc.github.io/catalyst/"  target="_blank">Catalyst</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://barterdex.supernet.org/"  target="_blank">Barterdex</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://enigmampc.github.io/catalyst/"  target="_blank">Catalyst</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://testnet.hodlhodl.com/"  target="_blank">Hodl Hodl</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://blog.gnosis.pm/introducing-the-gnosis-dutch-exchange-53bd3d51f9b2"  target="_blank">Gnosis Dutch Exchange</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://etherdelta.com/"  target="_blank">Etherdelta</a> 
+                            <p></p>
+                        </div>
+
+
+                    </div>
+                    {{!-- <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>行情</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="/">比特币</a> 
+                            <p>IBM开发者社区Java 技术, 文章, 教程</p>
+                        </div>
+                    </div>  --}}
+                    <div class="ui four column grid stackable smBlock">
+                        <div class="column subCateg">
+                            <h3>投资（ICO）</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="http://www.icocountdown.com/">icocountdown</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://picoloresearch.com/">Picolo Research</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://topicolist.com/">Top ICO List</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://icoholder.com/">ICOHolder</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.icoalert.com/">ICOALERT</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://cryptomiso.com/">CryptoMiso</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="http://icorating.com/">ICORATING</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="http://blockdiscover.com/">Blockdiscover</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://tokenmarket.net/">TokenMarket</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://crushcrypto.com/">CrushCrypto</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://coinspectator.com/">Coin Spectator</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://globalhalo.com/">GLOBALHALO</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://icobench.com/">ICO Bench</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://www.kickico.com/zh/">KICKICO</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="http://www.icocountdown.com/">icocountdown</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://icodrops.com/">ICO Drops</a> 
+                            <p></p>
+                        </div>
+                        <div class="column">
+                            <a href="https://icowatchlist.com/">ICO Watchlist</a> 
+                            <p></p>
+                        </div>
+
+                    </div>
+                    {{!-- <div class="ui four column grid stackable smBlock">
+                            <div class="column subCateg">
+                                <h3>基金</h3> 
+                            </div>
+                            <div class="column">
+                                <a href="/">比特币</a> 
+                                <p>IBM开发者社区Java 技术, 文章, 教程</p>
+                            </div>
+                    </div> --}}
+                    {{!-- <div class="ui four column grid stackable smBlock">
+                            <div class="column subCateg">
+                                <h3>BitShares</h3> 
+                            </div>
+                            <div class="column">
+                                <a href="/">比特币</a> 
+                                <p>IBM开发者社区Java 技术, 文章, 教程</p>
+                            </div>
+                    </div>
+                    <div class="ui four column grid stackable smBlock">
+                                <div class="column subCateg">
+                                    <h3>ATM</h3> 
+                                </div>
+                                <div class="column">
+                                    <a href="/">比特币</a> 
+                                    <p>IBM开发者社区Java 技术, 文章, 教程</p>
+                                </div>
+                    </div> --}}
+                </div>
+               
+               
+               
+               {{!-- <div class="categ">
+                    <h2 class="keywords">挖矿算力</h2>
+                    <div class="four column row ui grid smBlock">
+                        <div class="column subCateg">
+                            <h3>挖矿</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="/">比特币</a> 
+                            <p>IBM开发者社区Java 技术, 文章, 教程</p>
+                        </div>
+                    </div>
+                    <div class="four column row ui grid smBlock">
+                        <div class="column subCateg">
+                            <h3>矿池</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="/">比特币</a> 
+                            <p>IBM开发者社区Java 技术, 文章, 教程</p>
+                        </div>
+                    </div>
+                    <div class="four column row ui grid smBlock">
+                        <div class="column subCateg">
+                            <h3>云算力</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="/">比特币</a> 
+                            <p>IBM开发者社区Java 技术, 文章, 教程</p>
+                        </div>
+                    </div>
+                    <div class="four column row ui grid smBlock">
+                        <div class="column subCateg">
+                            <h3>矿机</h3> 
+                        </div>
+                        <div class="column">
+                            <a href="/">比特币</a> 
+                            <p>IBM开发者社区Java 技术, 文章, 教程</p>
+                        </div>
+                    </div>
+                    <div class="four column row ui grid smBlock">
+                            <div class="column subCateg">
+                                <h3>算力</h3> 
+                            </div>
+                            <div class="column">
+                                <a href="/">比特币</a> 
+                                <p>IBM开发者社区Java 技术, 文章, 教程</p>
+                            </div>
+                    </div>
+                    <div class="four column row ui grid smBlock">
+                            <div class="column subCateg">
+                                <h3>收益计算</h3> 
+                            </div>
+                            <div class="column">
+                                <a href="/">比特币</a> 
+                                <p>IBM开发者社区Java 技术, 文章, 教程</p>
+                            </div>
+                    </div>
+                    <div class="four column row ui grid smBlock">
+                                <div class="column subCateg">
+                                    <h3>以太坊</h3> 
+                                </div>
+                                <div class="column">
+                                    <a href="/">比特币</a> 
+                                    <p>IBM开发者社区Java 技术, 文章, 教程</p>
+                                </div>
+                    </div>
+                </div> --}}
+
+
+
+
+
+            </div>
+            <!--
+         --><div class="four wide computer sixteen wide mobile column stackable rightBlock">
+             {{> general/rightBlock}}
+            </div>
+    </div>
+</div>
+
+
+
+
+<div style="position: fixed; right: 5%; bottom:5%;">
+   <a href="#top" style="font-size:2rem;color: grey;"><i class="chevron up icon" title="回到顶部"></i></a> 
+</div>

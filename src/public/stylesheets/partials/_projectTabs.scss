@@ -1,0 +1,92 @@
+/***
+        <div class="projectTabs">
+            <div class="ui secondary menu">
+                <div class="tabMenuWrapper">
+                <a class="item active" data-tab="overview">概括</a>
+                <a class="item" data-tab="elements">参数</a>
+                <a class="item" data-tab="files">文件</a>
+                <a class="item" data-tab="reputation">爆料</a>
+                </div>
+            </div>
+
+            <div class="ui active tab segment" data-tab="overview">
+            </div>
+            <div class="ui tab segment coinElements" data-tab="elements">
+
+            </div>
+            <div class="ui tab segment" data-tab="files">
+
+            </div> 
+            <div class="ui tab segment" data-tab="reputation">
+            </div> 
+
+        </div>
+
+***/
+
+.projectTabs{
+    margin:0;
+    padding:0;
+       
+    ul li,ol li{
+        padding-bottom: 0.8rem;
+        line-height:1.2rem;
+    }
+
+    .ui.tab.segment{
+        border: 0;
+        -webkit-box-shadow: 0 1px 2px 0 transparent;
+        box-shadow: 0 1px 2px 0 transparent;
+
+        padding-left: 22%/**32px**/;
+        padding-right: 22%;
+
+        margin-top:0;
+        img{
+            max-width: 100%;
+        }
+    }
+
+    .ui.tab.active.segment{
+        background-color:  #fafafa;
+    }
+    .ui.secondary.menu{
+        background-color: white;
+        border-bottom: 1px solid #eeeeee;
+        margin: 0;
+        padding-top: 15px;
+        padding-bottom: 15px;
+
+        margin:0 auto;
+        text-align: center;
+
+        .tabMenuWrapper a.item{
+            display:inline-block;
+        }
+    
+        .item{
+             color: #777777;
+             font-size: 1.2rem;
+        }
+    
+        .active.item{
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            background-color: transparent; 
+            border-radius: none;
+            color: #e54a35;
+        }
+        a.item:hover, a.active.item:hover{
+            -webkit-box-shadow: none;
+            box-shadow: none;
+            background-color: transparent; 
+            border-radius: none;
+            color: #e54a35;
+        }
+    }
+
+
+    .tabMenuWrapper{
+        width: 100%;
+    }
+}

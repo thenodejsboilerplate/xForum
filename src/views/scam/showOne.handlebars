@@ -1,0 +1,113 @@
+{{#extend "css"}}
+<style>
+    article.message{
+        margin:2rem 2rem 2rem;
+    }
+    .fontSign{
+        font-weight: bold;
+        font-size: 1.5rem;
+        margin-bottom: 2rem!important;
+    }
+    .icon-text{
+        margin-bottom: 1rem;
+    }
+    .scamShow h3{
+       color: black;
+       font-weight: bold;
+    }
+    .scamShow p.tokenInfo{
+        margin-bottom:1rem;
+        margin-left:1rem;
+    }
+
+</style>
+{{/extend}}
+
+{{> general/header}}
+<div class="scamShow">
+    {{#if isScam}}
+    <section class="block">
+        <article class="message is-danger">
+            <div class="message-body">
+                <div class="icon-text fontSign">
+                    <span class="icon has-text-danger">
+                                <i class="fas fa-ban" ></i>
+                    </span>
+                    <span>
+                          Status:    Warning
+                    </span>
+                </div>
+            <h3>Contract Address</h3>
+            <p class="tokenInfo">{{response.address}}</p>
+
+            <h3>Message:</h3>
+            <p class="tokenInfo"> {{response.Error}}</p>
+
+             
+            {{!-- <a href="{{project.url}}" class="messageA">View</a>
+            <a href="/project/update?id={{project._id}}" class="messageA">Update Data</a> --}}
+
+            </div>
+        </article>
+    </section>
+        <p style="text-align:center; margin-top:2rem;font-size:0.8rem; margin:1rem 2rem 2rem;">Disclaimer: Any scam address listed on this page have been reported as a scam and are potentially dangerous. Visit at your own risk.</p>
+
+   {{else}}
+
+    <section class="block">
+        <article class="message is-info">
+            <div class="message-body">
+                <div class="icon-text fontSign">
+                    <span class="icon has-text-info">
+                                <i class="fas fa-exclamation-triangle"></i>
+                    </span>
+                    <span>
+                          Status:  Unknown
+                    </span>
+                </div>
+            <h3>Contract Address</h3>
+            <p class="tokenInfo">{{response.address}}</p>
+
+            <h3>Message:</h3>
+            <p class="tokenInfo"> No data available but you could report it.We'll help you investigate it!</p>
+
+            <a href="/project/submit" class="button is-primary">Report</a>
+            {{!-- <a href="{{project.url}}" class="messageA">View</a>
+            <a href="/project/update?id={{project._id}}" class="messageA">Update Data</a> --}}
+
+            </div>
+
+        </article>
+    </section>
+    <p style="text-align:center; margin-top:2rem;font-size:0.8rem; margin:1rem 2rem 2rem;">Disclaimer: Any scam address listed on this page have been reported as a scam and are potentially dangerous. Visit at your own risk.</p>
+
+    <div class="shitcoin"></div>
+
+
+    {{/if}}
+
+     
+
+{{#extend "js"}}
+<script src="https://kit.fontawesome.com/a076d05399.js" crossorigin="anonymous"></script>
+
+
+<script>
+    var script = document.createElement('script');
+    script.type = 'text/javascript';
+
+    var address = '0x4a8c9d751eeabc5521a68fb080dd7e72e46462af';
+    // 传参并指定回调执行函数为onBack
+    script.src = 'https://aywt3wreda.execute-api.eu-west-1.amazonaws.com/default/IsHoneypot?chain=eth&token='+address +'&callback=onBack';
+    document.head.appendChild(script);
+
+    // 回调执行函数
+    function onBack(res) {
+        console.log(res);
+    }
+
+</script>
+
+
+
+{{/extend}}

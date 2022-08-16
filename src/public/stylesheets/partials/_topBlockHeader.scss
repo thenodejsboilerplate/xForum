@@ -1,0 +1,102 @@
+/**
+        <div class="topBlock whiteStyle marginBottom0" style="">
+            {{!-- <span class="return2"><i class="angle left icon"></i></span> --}}
+            <h1>Airdrop | Winchain</h1>
+            <div class="blockContent">
+                <h2>Winchain</h2>
+                <p>第一款杀手级Dapp应用，致力于成为国际第一的额区块链天下。第一款杀手级Dapp应用，致力于成为国际第一的额区块链天下</p>
+                <span class="like">+ 关注</span>
+            </div>
+        </div>
+**/
+
+.topBlock.greyStyle{
+    p,h2,span,span a{
+        color: #e3e3e3!important;
+    }
+    span.like, span.toAirdrop a, span.report a{
+        border: 1px solid #fff;
+    }
+}
+.topBlock.whiteStyle{
+    p,h2,span,span a{
+        color: #fff!important;
+    }
+    span.like, span.toAirdrop, span.report{
+        border:1px solid #fff;
+    }
+}
+
+
+
+
+.topBlock{
+    padding:0.6rem;
+    margin: 0 auto;
+    
+    text-align:center;
+
+
+    background-position: center; 
+    background-attachment: scroll;
+    background-repeat: no-repeat;
+    background-size: cover;
+
+    &.marginBottom0{
+        margin-bottom:0;
+    }
+
+    h1{
+        text-align:left;
+        font-size:0.7rem;
+    }
+    
+    // h2{
+    //     text-align:left;
+    //     font-size:0.7rem;
+    //     margin-top:0;
+    //     padding-top:0;
+        
+    // }
+    
+    span.return2{
+        display: block!important;
+        margin-bottom:1rem;
+        text-align: left;
+        
+        i{
+            font-size:2rem;
+        }
+    }
+
+    .blockContent{
+        padding: 1rem 2rem;
+        padding-bottom: 3rem!important;
+
+        p,h2,span.like{
+            color: #000;
+        }
+        img{
+            width: 50px;
+            height: 50px;
+            border-radius: 10px;
+        }
+        p{
+            margin-bottom:2rem;
+            font-size: 0.9rem;
+        }        
+        h2{
+            font-size: 1.1rem;
+        }
+        
+    }
+
+    span.like, span.toAirdrop,span.report{
+        display: inline-block;
+        border: 1px solid #000;
+        border-radius: 15px;
+        padding: 0.2rem 0.4rem;
+       
+    }
+
+}

@@ -1,0 +1,87 @@
+{{#extend "css"}}
+  <style>
+    .secondHeader{
+      display: none;
+    }
+
+    .formHeader{
+        font-size: 2rem; 
+        margin-bottom:4rem;
+        text-align:center;
+    }
+    .signup{
+      padding:1rem 1rem;
+    }
+
+    .moreOptions{
+      width:100%;
+      text-align:center;
+    }
+    .moreOptions a{
+        color: white;
+    }
+
+
+  </style>
+{{/extend}}
+{{> general/header}}
+
+<div class="contentBlock">
+        <div class="ui column grid" style="margin-top: 0.5rem;">
+                <div class="eleven wide computer sixteen wide mobile column stackable leftBlock"> 
+                        {{> general/message}}
+                        <div class="signup">
+                            <div class="ui basic">
+                                <h2 class="formHeader">Sign Up (注册)</h2>
+                                <form class="ui form" method="POST" action="/user/postSignup">
+                                    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                                    <div class="field">
+                                        <label>Username（用户名）</label>
+                                        <input type="text" name="username">
+                                    </div>
+
+                                    <div class="field">
+                                        <label>Email（邮箱）</label>
+                                        <input type="text" name="email">
+                                    </div>
+                                    <div class="field">
+                                        <label>Password （密码）</label>
+                                        <input type="text" name="password">
+                                    </div>
+                                    <div class="field">
+                                        <label>Confirm Password （确认密码）</label>
+                                        <input type="text" name="confirmPassword">
+                                    </div>
+                                    <button class="ui button" type="submit">提交</button>
+                                </form>
+                                <br>                           
+                                <div class="ui bottom attached warning message">
+                                <i class="icon help"></i>
+                                已经注册? <a href="/user/login">登陆</a>.
+                                </div>
+                                {{!-- <div class="ui horizontal divider">
+                                    Or
+                                </div>
+                                <div class="moreOptions">
+                                    <div class="ui teal labeled icon button" style="">
+                                        <a href="/user/login">Log In (登录)</a> 
+                                        <i class="add icon"></i>
+                                    </div>
+                                </div> --}}
+                            </div>
+
+
+                        </div>
+                </div>
+    
+                <div class="four wide computer sixteen wide mobile column stackable rightBlock">
+                      {{> general/rightBlock}}
+                </div>
+        </div>
+</div>
+
+
+
+
+
+

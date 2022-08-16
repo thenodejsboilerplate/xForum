@@ -1,0 +1,50 @@
+.rightBlock{
+    margin-top:0;
+    
+    padding-left:1rem;
+    
+    height:100%;
+
+    .rightSection{
+        border-bottom: 1px solid #e3e3e3;
+        padding-bottom: 1rem;
+        margin-bottom:2rem;
+
+        h3{
+            margin-bottom:1.5rem;
+        }
+        &>span{
+            display: block;
+            margin-bottom:0.3rem;   
+        }
+        p span{
+            display: innline-block;
+            margin-right: 0.2rem;
+            line-height:1.5rem;
+        }
+        &>span strong{
+            font-size: 0.9rem;
+        }
+        &>p a{
+            font-size: 0.8rem;
+            color: rgba(0, 0, 0, .4);
+        }
+    }
+
+    .blockView{
+         &>p{
+            margin-bottom:1rem;
+         }       
+         &>p strong{
+             display: inline-block;
+             width:30%;     
+         } 
+         &>p a{
+             display: inline-block;
+             color: olive;
+             margin-left: 2rem;
+         } 
+    }
+
+}
+  

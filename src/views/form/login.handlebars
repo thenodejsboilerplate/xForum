@@ -1,0 +1,106 @@
+{{#extend "css"}}
+  <style>
+    .secondHeader{
+      display: none;
+    }
+    .formHeader{
+        font-size: 2rem; 
+        margin-bottom:4rem;
+        text-align:center;
+    }
+    .signup{
+      padding:1rem 1rem;
+    }
+
+    .moreOptions{
+      width:100%;
+      text-align:center;
+    }
+    .moreOptions a{
+        color: white;
+    }
+
+
+  </style>
+{{/extend}}
+{{> general/header}}
+
+<div class="contentBlock">
+
+    <div class="ui column grid" style="margin-top: 0.5rem;">
+            <div class="eleven wide computer sixteen wide mobile column stackable leftBlock"> 
+                    {{> general/message}}
+                    <div class="signup">
+                        <div class="ui basic">
+                            
+                            <h2 class="formHeader">Log In (登陆)</h2>
+                            <form class="ui form" method="POST" action="/user/postLogin">
+                                <input type="hidden" name="_csrf" value="{{csrfToken}}">
+                                <div class="field">
+                                    <label>Email（邮箱）</label>
+                                    <input type="email" name="email">
+                                </div>
+                                <div class="field">
+                                    <label>Password （密码）</label>
+                                    <input type="text" name="password">
+                                </div>
+                                <input class="ui button" type="submit" value="提交">
+                            </form>
+                            <br>                           
+                            <div class="ui bottom attached warning message">
+                            <i class="icon help"></i>
+                            还未注册? <a href="/user/signup">注册</a>.
+                            </div>
+                            {{!-- <div class="ui horizontal divider">
+                                Or
+                            </div>
+                            <div class="moreOptions">
+                                <div class="ui teal labeled icon button" style="">
+                                    <a href="/user/signup">Create New Account (注册)</a> 
+                                    <i class="add icon"></i>
+                                </div>
+                            </div> --}}
+                        </div>
+                    </div>
+            </div>
+
+            <div class="four wide computer sixteen wide mobile column stackable rightBlock">
+                {{> general/rightBlock}}
+
+            </div>
+
+
+
+    </div>
+</div>
+
+
+
+
+
+
+
+
+
+
+{{!-- <h1>LOGIN</h1>
+<h3><a href="/auth/google">Sign In with Google</a></h3>
+<h3><a href="/auth/github">Sign In with Github</a></h3>
+
+<form method="POST" action="/user/postLogin">
+    <input type="hidden" name="_csrf" value="{{csrfToken}}">
+    <label>
+    Email: <input type="email" name="email">
+    </label>
+
+    <label>
+    Password: <input type="password" name="password">
+    </label>
+
+    <input type="submit" value="submit">
+</form>
+
+    <hr>
+
+    <p>Need an account? <a href="/user/signup">signup</a></p>
+    <p>Or go <a href="/user/forgotPassword">Forget your Password</a>.</p> --}}

@@ -1,0 +1,53 @@
+
+.leftBlock,.rightBlock{
+    border: 5px solid #f2f2f2;
+    background-color: #fff;
+}
+.leftBlock{
+    .categ{
+
+         width:100%;
+         height:auto;
+         padding: 1rem 0rem;
+         border-bottom:1px solid #f8f8f8;
+
+         h2.keywords{
+            margin-bottom: 1rem;
+            display:inline-block;
+            padding: 0.5rem;
+            width: auto;
+            background-color: #fa5742;
+            color: white;
+            
+        }
+        .subCateg {
+            h3{
+                border-left:3px solid rgb(255,69,0);
+                padding-left:0.3rem;
+            }
+
+        }
+        .column a:hover{
+            color: rgb(255,69,0);
+            border-bottom:1px solid rgb(255,69,0); 
+        }
+        .smBlock {
+            a{
+                color: #777;
+                display:block;
+                padding-bottom:0.3rem;
+            }
+            .column p{
+                color: #cccccc;//rgb(223, 217, 217);
+                
+            }
+
+        }
+
+     }
+
+
+
+
+
+}
